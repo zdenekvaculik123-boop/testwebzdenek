@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Brain, Server, Cpu } from "lucide-react";
+import { ArrowRight, ShieldCheck, Zap, Database } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -16,13 +16,13 @@ const HeroSection = () => {
       {/* Floating orbs */}
       <motion.div
         className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[120px]"
-        style={{ background: 'hsl(168 80% 50% / 0.08)' }}
+        style={{ background: 'hsl(168 80% 50% / 0.07)' }}
         animate={{ scale: [1, 1.2, 1], x: [0, 30, 0], y: [0, -20, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-[100px]"
-        style={{ background: 'hsl(260 60% 60% / 0.08)' }}
+        style={{ background: 'hsl(260 60% 60% / 0.07)' }}
         animate={{ scale: [1.2, 1, 1.2], x: [0, -20, 0], y: [0, 30, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -42,47 +42,53 @@ const HeroSection = () => {
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-sm font-medium text-muted-foreground font-mono">
-              AI Infrastructure & Consulting
+              B2B AI Infrastructure & Consulting
             </span>
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 leading-[1.05]">
-            Vaše vlastní
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.08]">
+            AI asistent pro vaše
             <br />
-            <span className="gradient-text">AI infrastruktura</span>
+            <span className="gradient-text">interní znalosti</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Pomáháme firmám vybudovat, nasadit a spravovat in-house AI řešení.
-            Od návrhu infrastruktury po trénování modelů na míru.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed">
+            Bez trénování od nuly. Bez úniku dat. Nasadíme AI, která čte vaše dokumenty
+            a odpovídá přesně na základě vašich firemních znalostí.
+          </p>
+
+          <p className="text-sm text-muted-foreground/70 max-w-xl mx-auto mb-10 font-mono">
+            Řešení pro technické i netechnické firmy — nasazení v řádu týdnů, ne měsíců.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
-            <Button size="lg" className="text-base px-8 py-6 glow-primary group">
-              Nezávazná konzultace
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" className="text-base px-8 py-6 glow-primary group" asChild>
+              <a href="#contact">
+                Nezávazná konzultace
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="text-base px-8 py-6">
-              Naše služby
+            <Button size="lg" variant="outline" className="text-base px-8 py-6" asChild>
+              <a href="#how-it-works">Jak to funguje</a>
             </Button>
           </div>
 
-          {/* Stats */}
+          {/* Key benefits */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
             {[
-              { icon: Brain, label: "Trénovaných modelů", value: "50+" },
-              { icon: Server, label: "GPU infrastruktur", value: "20+" },
-              { icon: Cpu, label: "Spokojených klientů", value: "30+" },
-            ].map((stat, i) => (
-              <div key={i} className="glass-card rounded-xl p-6 text-center">
-                <stat.icon className="w-6 h-6 text-primary mx-auto mb-3" />
-                <div className="text-3xl font-bold mb-1">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+              { icon: Database, label: "RAG architektura", desc: "AI čte dokumenty v reálném čase, data nezůstávají v modelu" },
+              { icon: ShieldCheck, label: "Data pod vaší kontrolou", desc: "On-premise nebo privátní cloud — žádná data třetím stranám" },
+              { icon: Zap, label: "Rychlé nasazení", desc: "Funkční řešení v řádu týdnů, ne měsíců" },
+            ].map((item, i) => (
+              <div key={i} className="glass-card rounded-xl p-5 text-left">
+                <item.icon className="w-5 h-5 text-primary mb-3" />
+                <div className="font-semibold text-sm mb-1">{item.label}</div>
+                <div className="text-xs text-muted-foreground leading-relaxed">{item.desc}</div>
               </div>
             ))}
           </motion.div>

@@ -4,9 +4,11 @@ import { Menu, X, Brain } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "O nás", href: "#about" },
-  { label: "Služby", href: "#services" },
-  { label: "Reference", href: "#references" },
+  { label: "Co děláme", href: "#about" },
+  { label: "Jak to funguje", href: "#how-it-works" },
+  { label: "Technologie", href: "#technology" },
+  { label: "Nasazení", href: "#deployment" },
+  { label: "Pro koho", href: "#for-whom" },
   { label: "Kontakt", href: "#contact" },
 ];
 
@@ -23,7 +25,7 @@ const Navbar = () => {
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -33,11 +35,13 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <Button size="sm" className="glow-primary">Kontaktujte nás</Button>
+            <Button size="sm" className="glow-primary" asChild>
+              <a href="#contact">Konzultace zdarma</a>
+            </Button>
           </div>
 
           {/* Mobile toggle */}
-          <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
+          <button className="lg:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -47,7 +51,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden glass-card border-t border-border/30"
+            className="lg:hidden glass-card border-t border-border/30"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -63,7 +67,9 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button size="sm" className="glow-primary w-full">Kontaktujte nás</Button>
+              <Button size="sm" className="glow-primary w-full" asChild>
+                <a href="#contact">Konzultace zdarma</a>
+              </Button>
             </div>
           </motion.div>
         )}

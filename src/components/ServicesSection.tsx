@@ -1,42 +1,42 @@
 import { motion } from "framer-motion";
-import { Server, Brain, Shield, Workflow, Database, Gauge } from "lucide-react";
+import { Database, Cpu, ShieldCheck, Gauge, LifeBuoy, Layers } from "lucide-react";
 
 const services = [
   {
-    icon: Server,
-    title: "GPU infrastruktura",
-    description: "Návrh a nasazení on-premise i cloudové GPU infrastruktury optimalizované pro trénování a inference AI modelů.",
-    tags: ["NVIDIA", "CUDA", "Kubernetes"],
-  },
-  {
-    icon: Brain,
-    title: "Trénování modelů",
-    description: "Fine-tuning a trénování jazykových, vizuálních i specializovaných modelů na vašich vlastních datech.",
-    tags: ["LLM", "Computer Vision", "NLP"],
-  },
-  {
-    icon: Shield,
-    title: "Bezpečnost & compliance",
-    description: "Zajištění bezpečnosti dat a souladu s regulatorními požadavky při práci s AI modely.",
-    tags: ["GDPR", "On-premise", "Audit"],
-  },
-  {
-    icon: Workflow,
-    title: "MLOps & automatizace",
-    description: "Nastavení CI/CD pipeline pro ML modely, monitoring a automatizované retrénování.",
-    tags: ["MLflow", "Kubeflow", "Monitoring"],
-  },
-  {
     icon: Database,
-    title: "Datové inženýrství",
-    description: "Příprava, čištění a správa datových pipeline pro efektivní trénování modelů.",
-    tags: ["ETL", "Data Lake", "Spark"],
+    title: "RAG implementace",
+    description: "Kompletní nasazení Retrieval-Augmented Generation nad vašimi firemními dokumenty. AI odpovídá výhradně z vašich dat, zdroje jsou transparentní a auditovatelné.",
+    tags: ["Vektorová databáze", "LLM", "Dokumenty"],
+  },
+  {
+    icon: Cpu,
+    title: "QLoRA fine-tuning",
+    description: "Prémiové doučení modelu na vaší terminologii a stylu. Snižuje halucinace a zlepšuje konzistenci odpovědí v doménově specifickém kontextu.",
+    tags: ["Fine-tuning", "PEFT", "Doménová adaptace"],
+  },
+  {
+    icon: Layers,
+    title: "Příprava dat a indexování",
+    description: "Strukturování, čištění a indexování vašich dokumentů do vektorové databáze. Základ spolehlivého RAG řešení.",
+    tags: ["ETL", "Embedding", "Chunking"],
+  },
+  {
+    icon: ShieldCheck,
+    title: "Bezpečné nasazení",
+    description: "On-premise nebo privátní cloud deployment s důrazem na bezpečnost dat, GDPR compliance a auditovatelnost přístupů.",
+    tags: ["On-premise", "GDPR", "Audit log"],
   },
   {
     icon: Gauge,
-    title: "Konzultace & strategie",
-    description: "Poradenství v oblasti AI strategie, výběr technologií a plánování implementace.",
-    tags: ["Roadmap", "ROI", "Strategie"],
+    title: "Monitoring a kvalita",
+    description: "Nastavení systémů pro průběžné sledování kvality odpovědí, detekci halucinací a automatické upozornění na degradaci.",
+    tags: ["MLflow", "Evaluation", "Monitoring"],
+  },
+  {
+    icon: LifeBuoy,
+    title: "Konzultace a strategie",
+    description: "Pomůžeme vám definovat vhodný use-case, vybrat správnou architekturu a naplánovat implementaci od A do Z.",
+    tags: ["Roadmap", "Use-case analýza", "ROI"],
   },
 ];
 
@@ -62,7 +62,7 @@ const ServicesSection = () => {
             Komplexní <span className="gradient-text">AI řešení</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Od návrhu infrastruktury po trénování modelů — pokryjeme celý životní cyklus vašeho AI projektu.
+            Od analýzy use-case po produkční nasazení — pokryjeme celý životní cyklus vašeho AI projektu.
           </p>
         </motion.div>
 
@@ -78,10 +78,10 @@ const ServicesSection = () => {
             >
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity"
                 style={{ background: 'hsl(168 80% 50% / 0.06)' }} />
-              
-              <service.icon className="w-8 h-8 text-primary mb-5" />
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-muted-foreground leading-relaxed mb-5">{service.description}</p>
+
+              <service.icon className="w-7 h-7 text-primary mb-5" />
+              <h3 className="text-lg font-semibold mb-3">{service.title}</h3>
+              <p className="text-muted-foreground leading-relaxed mb-5 text-sm">{service.description}</p>
               <div className="flex flex-wrap gap-2">
                 {service.tags.map((tag) => (
                   <span key={tag} className="px-3 py-1 rounded-full text-xs font-mono bg-secondary text-muted-foreground">
