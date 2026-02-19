@@ -51,7 +51,7 @@ const ContactSection = () => {
             {[
               { icon: Mail, label: "E-mail", value: "info@tekinfra.cz" },
               { icon: Phone, label: "Telefon", value: "+420 608 557 960" },
-              { icon: MapPin, label: "Adresa", value: "Zakšínská 611/3, Praha 9" },
+              { icon: MapPin, label: "Adresa", value: "TEKINFRA, s.r.o. | IČ: 04356187\nZakšínská 611/3, Praha 9" },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -59,7 +59,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground mb-1">{item.label}</div>
-                  <div className="font-medium">{item.value}</div>
+                  <div className="font-medium whitespace-pre-line">{item.value}</div>
                 </div>
               </div>
             ))}
