@@ -77,7 +77,7 @@ const ServicesSection = () => {
               transition={{ delay: i * 0.1 }}
             >
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity"
-                style={{ background: 'hsl(168 80% 50% / 0.06)' }} />
+                style={{ background: 'hsl(220 75% 55% / 0.06)' }} />
 
               <service.icon className="w-7 h-7 text-primary mb-5" />
               <h3 className="text-lg font-semibold mb-3">{service.title}</h3>

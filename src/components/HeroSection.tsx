@@ -16,13 +16,13 @@ const HeroSection = () => {
       {/* Floating orbs */}
       <motion.div
         className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[120px]"
-        style={{ background: 'hsl(168 80% 50% / 0.07)' }}
+        style={{ background: 'hsl(220 75% 55% / 0.07)' }}
         animate={{ scale: [1, 1.2, 1], x: [0, 30, 0], y: [0, -20, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-[100px]"
-        style={{ background: 'hsl(260 60% 60% / 0.07)' }}
+        style={{ background: 'hsl(200 70% 50% / 0.07)' }}
         animate={{ scale: [1.2, 1, 1.2], x: [0, -20, 0], y: [0, 30, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />

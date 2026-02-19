@@ -1,4 +1,4 @@
-import { Brain } from "lucide-react";
+import tekinfraLogo from "@/assets/tekinfra-logo.png";
 
 const Footer = () => {
   return (
@@ -6,11 +6,10 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <Brain className="w-5 h-5 text-primary" />
-            <span className="font-semibold">AICorp</span>
+            <img src={tekinfraLogo} alt="TEKINFRA" className="h-6" />
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} AICorp. Všechna práva vyhrazena.
+            © {new Date().getFullYear()} TEKINFRA, s.r.o. Všechna práva vyhrazena.
           </p>
         </div>
       </div>

@@ -1,21 +1,31 @@
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+import { Target, Lightbulb, ShieldCheck, TrendingUp, Handshake } from "lucide-react";
 
-const testimonials = [
+const values = [
   {
-    name: "Martin Novák",
-    role: "CTO, TechVision s.r.o.",
-    quote: "Díky jejich práci jsme dokázali nasadit vlastní AI modely během 3 měsíců. Infrastruktura funguje bezchybně.",
+    icon: Target,
+    title: "Proč vznikl TEKINFRA",
+    description: "Věříme, že AI má firmám reálně pomáhat — ne být jen buzzword v prezentaci. Založili jsme TEKINFRA, abychom přinášeli praktická řešení s měřitelným dopadem.",
   },
   {
-    name: "Jana Svobodová",
-    role: "Head of Data, DataFlow a.s.",
-    quote: "Profesionální přístup a hluboká znalost problematiky. Pomohli nám vybudovat kompletní MLOps pipeline.",
+    icon: Lightbulb,
+    title: "Náš přístup",
+    description: "Kombinujeme technickou expertízu s porozuměním byznys potřebám. Každé řešení navrhujeme na míru — žádné šablonové implementace.",
   },
   {
-    name: "Petr Černý",
-    role: "CEO, InnoAI Czech",
-    quote: "Spolupráce překonala naše očekávání. Naše AI infrastruktura je teď plně pod naší kontrolou.",
+    icon: ShieldCheck,
+    title: "Bezpečnost na prvním místě",
+    description: "Data klientů bereme smrtelně vážně. Proto preferujeme on-premise nasazení a privátní infrastrukturu, kde data nikdy neopustí firemní perimetr.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Transparentní spolupráce",
+    description: "Žádné skryté náklady, žádné vendor lock-in. Stavíme na open-source technologiích a klient vždy vlastní kompletní řešení.",
+  },
+  {
+    icon: Handshake,
+    title: "Hledáme první partnery",
+    description: "Jsme na začátku cesty a hledáme firmy, které chtějí být mezi prvními, kdo AI nad interními daty skutečně nasadí. Nabízíme zvýhodněné podmínky pro early adopters.",
   },
 ];
 
@@ -29,30 +39,30 @@ const ReferencesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-sm font-mono text-primary mb-4 block">// REFERENCE</span>
+          <span className="text-sm font-mono text-primary mb-4 block">// PROČ MY</span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Co říkají naši <span className="gradient-text">klienti</span>
+            Naše <span className="gradient-text">hodnoty a přístup</span>
           </h2>
+          <p className="text-lg text-muted-foreground">
+            Jsme nový tým s jasnou vizí — přinášet firmám AI řešení, která fungují a dávají smysl.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {testimonials.map((t, i) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {values.map((v, i) => (
             <motion.div
               key={i}
-              className="glass-card rounded-2xl p-8 relative"
+              className={`glass-card rounded-2xl p-8 hover:border-primary/30 transition-colors ${i === values.length - 1 ? "md:col-span-2 lg:col-span-1" : ""}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
+              transition={{ delay: i * 0.1 }}
             >
-              <Quote className="w-8 h-8 text-primary/30 mb-4" />
-              <p className="text-foreground/90 leading-relaxed mb-6 italic">
-                "{t.quote}"
+              <v.icon className="w-7 h-7 text-primary mb-4" />
+              <h3 className="font-semibold text-lg mb-2">{v.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {v.description}
               </p>
-              <div className="border-t border-border/50 pt-4">
-                <div className="font-semibold text-sm">{t.name}</div>
-                <div className="text-xs text-muted-foreground">{t.role}</div>
-              </div>
             </motion.div>
           ))}
         </div>

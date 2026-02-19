@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Brain } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import tekinfraLogo from "@/assets/tekinfra-logo.png";
 
 const navLinks = [
   { label: "Co děláme", href: "#about" },
@@ -20,8 +21,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-2">
-            <Brain className="w-7 h-7 text-primary" />
-            <span className="text-lg font-bold tracking-tight">AICorp</span>
+            <img src={tekinfraLogo} alt="TEKINFRA" className="h-8" />
           </a>
 
           {/* Desktop nav */}
