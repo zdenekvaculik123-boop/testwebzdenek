@@ -13,7 +13,7 @@ const members = [
     name: "Zdeněk Vaculík",
     photo: teamZdenek,
     description:
-      "CFO, COO/IKT manažer, projektový manažer a člen představenstva s více než 20 lety zkušeností v investičních společnostech, výrobních podnicích a službách (logistika, obchod), multi-family officech a svěřenských fondech.",
+      "CFO, COO, IKT a projektový manažer s více než 20 lety zkušeností v investičních společnostech, výrobních podnicích a službách (logistika, obchod).",
   },
 ];
 
