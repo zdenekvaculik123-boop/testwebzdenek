@@ -5,6 +5,7 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import RagVsQloraSection from "@/components/RagVsQloraSection";
 import DeploymentSection from "@/components/DeploymentSection";
 import ForWhomSection from "@/components/ForWhomSection";
+import TeamSection from "@/components/TeamSection";
 import ServicesSection from "@/components/ServicesSection";
 import ReferencesSection from "@/components/ReferencesSection";
 import ContactSection from "@/components/ContactSection";
@@ -20,6 +21,7 @@ const Index = () => {
       <RagVsQloraSection />
       <DeploymentSection />
       <ForWhomSection />
+      <TeamSection />
       <ServicesSection />
       <ReferencesSection />
       <ContactSection />

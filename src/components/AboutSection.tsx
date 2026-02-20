@@ -50,6 +50,20 @@ const AboutSection = () => {
               <span className="text-foreground font-medium">QLoRA fine-tuning</span>, které RAG doplňuje
               a snižuje halucinace v konkrétním kontextu.
             </p>
+
+            <div className="mt-8 p-5 rounded-xl bg-secondary/50 border border-border/50">
+              <p className="text-sm font-mono text-primary mb-2">Co znamená Tekinfra?</p>
+              <div className="flex flex-col gap-2">
+                <div>
+                  <span className="font-semibold text-foreground">Tek / Tech</span>{" "}
+                  <span className="text-muted-foreground">— fonetický přepis slova „tech" (technology)</span>
+                </div>
+                <div>
+                  <span className="font-semibold text-foreground">Infra</span>{" "}
+                  <span className="text-muted-foreground">— zkrácenina pro „infrastructure" (infrastruktura)</span>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           {/* Right: use cases */}

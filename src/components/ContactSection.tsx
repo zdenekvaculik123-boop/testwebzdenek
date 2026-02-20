@@ -49,9 +49,9 @@ const ContactSection = () => {
             viewport={{ once: true }}
           >
             {[
-              { icon: Mail, label: "E-mail", value: "info@tekinfra.cz" },
+              { icon: Mail, label: "E-mail", value: "info@tekinfra.eu" },
               { icon: Phone, label: "Telefon", value: "+420 608 557 960" },
-              { icon: MapPin, label: "Adresa", value: "TEKINFRA, s.r.o. | IČ: 04356187\nZakšínská 611/3, Praha 9" },
+              { icon: MapPin, label: "Adresa", value: "TEKINFRA, s.r.o. | IČ: 04356187\nZakšínská 611/3, Praha 9\nČeská republika" },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
