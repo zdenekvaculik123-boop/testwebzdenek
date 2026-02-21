@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import tekinfraLogo from "@/assets/tekinfra-logo.png";
+import flagCz from "@/assets/flag-cz.png";
+import flagGb from "@/assets/flag-gb.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const Navbar = () => {
@@ -43,7 +45,8 @@ const Navbar = () => {
               onClick={toggleLang}
               className="px-3 py-1.5 rounded-md text-xs font-mono font-semibold border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors flex items-center gap-1.5"
             >
-              {lang === "cs" ? "🇬🇧 EN" : "🇨🇿 CZ"}
+              <img src={lang === "cs" ? flagGb : flagCz} alt="" className="w-5 h-5 rounded-full object-cover" />
+              {lang === "cs" ? "EN" : "CZ"}
             </button>
             <Button size="sm" className="glow-primary" asChild>
               <a href="#contact">{t("nav.cta")}</a>
@@ -79,9 +82,10 @@ const Navbar = () => {
               ))}
               <button
                 onClick={toggleLang}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2 text-left font-mono"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2 text-left font-mono flex items-center gap-2"
               >
-                {lang === "cs" ? "🇬🇧 English" : "🇨🇿 Čeština"}
+                <img src={lang === "cs" ? flagGb : flagCz} alt="" className="w-5 h-5 rounded-full object-cover" />
+                {lang === "cs" ? "English" : "Čeština"}
               </button>
               <Button size="sm" className="glow-primary w-full" asChild>
                 <a href="#contact">{t("nav.cta")}</a>
