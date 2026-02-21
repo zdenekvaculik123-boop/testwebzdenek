@@ -6,10 +6,9 @@ const AboutSection = () => {
   const { t } = useLanguage();
 
   const useCases = [
-    { icon: FileText, titleKey: "about.uc1.title", descKey: "about.uc1.desc" },
-    { icon: Search, titleKey: "about.uc2.title", descKey: "about.uc2.desc" },
-    { icon: MessageSquare, titleKey: "about.uc3.title", descKey: "about.uc3.desc" },
-    { icon: Briefcase, titleKey: "about.uc4.title", descKey: "about.uc4.desc" },
+    { icon: Target, titleKey: "about.uc1.title", descKey: "about.uc1.desc" },
+    { icon: Database, titleKey: "about.uc2.title", descKey: "about.uc2.desc" },
+    { icon: ClipboardCheck, titleKey: "about.uc3.title", descKey: "about.uc3.desc" },
   ];
 
   return (
