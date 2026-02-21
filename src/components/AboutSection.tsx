@@ -15,6 +15,14 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-24 relative">
       <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <span className="text-sm font-mono text-primary">{t("about.tag")}</span>
+        </motion.div>
         <div className="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
           {/* Left: text */}
           <motion.div
@@ -22,7 +30,6 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-sm font-mono text-primary mb-4 block">{t("about.tag")}</span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               {t("about.title1")}{" "}
               <span className="gradient-text">{t("about.title2")}</span>
