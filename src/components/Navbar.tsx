@@ -41,9 +41,9 @@ const Navbar = () => {
             ))}
             <button
               onClick={toggleLang}
-              className="px-3 py-1.5 rounded-md text-xs font-mono font-semibold border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors"
+              className="px-3 py-1.5 rounded-md text-xs font-mono font-semibold border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors flex items-center gap-1.5"
             >
-              {lang === "cs" ? "EN" : "CZ"}
+              {lang === "cs" ? "🇬🇧 EN" : "🇨🇿 CZ"}
             </button>
             <Button size="sm" className="glow-primary" asChild>
               <a href="#contact">{t("nav.cta")}</a>
