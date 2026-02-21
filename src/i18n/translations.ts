@@ -57,8 +57,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.uc1.desc": "Společně si ujasníme, kdo bude AI používat a v jakých situacích. Zmapujeme procesy, kde dnes vznikají nejčastější dotazy a ztrácí se čas.",
     "about.uc2.title": "Zmapování interní knowledge base",
     "about.uc2.desc": "Projdeme vaše zdroje znalostí (dokumenty, wiki, směrnice, specifikace) a vybereme, co má být součástí odpovědí. Nastavíme přístupy tak, aby každý viděl jen to, na co má oprávnění.",
-    "about.uc3.title": "Definice otázek & očekávaných odpovědí",
-    "about.uc3.desc": "Sepíšeme konkrétní otázky, na které má AI umět odpovídat, a definujeme, jak má vypadat správná odpověď (struktura, tonalita, odkazy na zdroje). Podle toho nastavíme pilot a měření kvality.",
+    "about.uc3.title": "Onboarding & Implementace",
+    "about.uc3.desc": "Sepíšeme konkrétní otázky, na které má AI umět odpovídat, a definujeme, jak má vypadat správná odpověď (struktura, tonalita, odkazy na zdroje). Podle toho nastavíme projekt implementace a pustíme se do realizace.",
 
     // HowItWorks
     "how.tag": "// JAK TO FUNGUJE",
@@ -268,8 +268,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.uc1.desc": "Together we clarify who will use AI and in what situations. We map processes where the most frequent questions arise and time is lost.",
     "about.uc2.title": "Mapping the internal knowledge base",
     "about.uc2.desc": "We review your knowledge sources (documents, wiki, guidelines, specifications) and select what should be part of the answers. We set up access so everyone sees only what they're authorized to.",
-    "about.uc3.title": "Defining questions & expected answers",
-    "about.uc3.desc": "We list specific questions the AI should answer and define what a correct answer looks like (structure, tone, source references). Based on that we set up a pilot and quality measurement.",
+    "about.uc3.title": "Onboarding & Implementation",
+    "about.uc3.desc": "We list specific questions the AI should answer and define what a correct answer looks like (structure, tone, source references). Based on that we set up the implementation project and start delivering.",
 
     // HowItWorks
     "how.tag": "// HOW IT WORKS",
