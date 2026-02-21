@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileText, Search, MessageSquare, Briefcase } from "lucide-react";
+import { Target, Database, ClipboardCheck } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const AboutSection = () => {
