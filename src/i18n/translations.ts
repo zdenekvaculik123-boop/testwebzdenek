@@ -36,7 +36,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.p2bold": "obchod, HR a podporu",
     "about.p2suffix": ". Typicky dodáme první funkční řešení v řádu týdnů.",
     "about.p3prefix": "Stavíme na prověřené RAG architektuře a bezpečném napojení na vaše systémy. Volitelně doplníme ",
-    "about.p3bold": "fine-tuning",
+    "about.p3bold": "QLoRA fine-tuning",
     "about.p3suffix": " pro jednotný styl odpovědí a doménovou terminologii.",
     "about.tekinfra.title": "Proč TekInfra",
     "about.tekinfra.tek": "Tek",
