@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileText, Search, MessageSquare, Briefcase, Sparkles } from "lucide-react";
+import { FileText, Search, MessageSquare, Briefcase } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const AboutSection = () => {
@@ -53,7 +53,7 @@ const AboutSection = () => {
             {/* TekInfra + Deployment box */}
             <div className="p-5 rounded-xl bg-secondary/50 border border-border/50">
               <p className="text-sm font-mono text-primary mb-3">{t("about.tekinfra.title")}</p>
-              <div className="flex flex-col gap-2 mb-5">
+              <div className="flex flex-col gap-2">
                 <div className="flex items-center gap-2">
                   <span className="px-2.5 py-1 rounded-md bg-primary/15 text-primary text-sm font-semibold">{t("about.tekinfra.tek")}</span>
                   <span className="text-sm text-muted-foreground">{t("about.tekinfra.tekDesc")}</span>
@@ -61,23 +61,6 @@ const AboutSection = () => {
                 <div className="flex items-center gap-2">
                   <span className="px-2.5 py-1 rounded-md bg-primary/15 text-primary text-sm font-semibold">{t("about.tekinfra.infra")}</span>
                   <span className="text-sm text-muted-foreground">{t("about.tekinfra.infraDesc")}</span>
-                </div>
-              </div>
-
-              <div className="border-t border-border/30 pt-4">
-                <p className="text-sm text-muted-foreground mb-3">{t("about.deploy.title")}</p>
-                <div className="flex flex-col gap-2">
-                  {[
-                    { num: "1", key: "about.deploy.s1", descKey: "about.deploy.s1d" },
-                    { num: "2", key: "about.deploy.s2", descKey: "about.deploy.s2d" },
-                    { num: "3", key: "about.deploy.s3", descKey: "about.deploy.s3d" },
-                  ].map((step) => (
-                    <div key={step.num} className="flex items-center gap-2 text-sm">
-                      <Sparkles className="w-4 h-4 text-primary/70 flex-shrink-0" />
-                      <span className="font-semibold text-foreground">{step.num} {t(step.key)}</span>
-                      <span className="text-muted-foreground">{t(step.descKey)}</span>
-                    </div>
-                  ))}
                 </div>
               </div>
             </div>
