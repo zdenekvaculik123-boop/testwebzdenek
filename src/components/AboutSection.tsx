@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileText, Search, MessageSquare, Briefcase, Zap, Sparkles } from "lucide-react";
+import { FileText, Search, MessageSquare, Briefcase, Sparkles } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const AboutSection = () => {
@@ -21,7 +21,11 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-sm font-mono text-primary">{t("about.tag")}</span>
+          <span className="text-sm font-mono text-primary block mb-4">{t("about.tag")}</span>
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+            {t("about.title1")}{" "}
+            <span className="gradient-text">{t("about.title2")}</span>
+          </h2>
         </motion.div>
         <div className="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
           {/* Left: text */}
@@ -30,22 +34,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              {t("about.title1")}{" "}
-              <span className="gradient-text">{t("about.title2")}</span>
-            </h2>
 
-            {/* Badges */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/60 border border-border/50 text-sm text-muted-foreground">
-                <span className="w-2 h-2 rounded-full bg-primary" />
-                {t("about.badge1")}
-              </span>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-sm text-primary font-medium">
-                <Zap className="w-3.5 h-3.5" />
-                {t("about.badge2")}
-              </span>
-            </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               {t("about.p1")}
