@@ -19,9 +19,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/30">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-32">
+        <div className="flex items-center justify-between h-24">
           <a href="#" className="flex items-center gap-2">
-            <img src={tekinfraLogo} alt="TEKINFRA" className="h-28" />
+            <img src={tekinfraLogo} alt="TEKINFRA" className="h-20" />
           </a>
 
           {/* Desktop nav */}
