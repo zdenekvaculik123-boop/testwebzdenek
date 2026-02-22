@@ -40,19 +40,19 @@ const AboutSection = () => {
             </p>
 
             {/* TekInfra + Deployment box */}
-            <div className="p-5 rounded-xl bg-secondary/50 border border-border/50">
-              <p className="text-sm font-mono text-primary mb-3">{t("about.tekinfra.title")}</p>
-              <div className="flex flex-col gap-2">
-                
+            
 
 
 
-                <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-1 rounded-md bg-primary/15 text-primary text-sm font-semibold">{t("about.tekinfra.infra")}</span>
-                  <span className="text-sm text-muted-foreground">{t("about.tekinfra.infraDesc")}</span>
-                </div>
-              </div>
-            </div>
+
+
+
+
+
+
+
+
+
           </motion.div>
         </div>
       </div>
