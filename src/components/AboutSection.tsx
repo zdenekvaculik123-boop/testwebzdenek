@@ -1,15 +1,8 @@
 import { motion } from "framer-motion";
-import { Target, Database, ClipboardCheck } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const AboutSection = () => {
   const { t } = useLanguage();
-
-  const useCases = [
-  { icon: Target, titleKey: "about.uc1.title", descKey: "about.uc1.desc" },
-  { icon: Database, titleKey: "about.uc2.title", descKey: "about.uc2.desc" },
-  { icon: ClipboardCheck, titleKey: "about.uc3.title", descKey: "about.uc3.desc" }];
-
 
   return (
     <section id="about" className="py-24 relative">
@@ -19,22 +12,17 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12">
-
           <span className="text-sm font-mono text-primary block mb-4">{t("about.tag")}</span>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
             {t("about.title1")}{" "}
             <span className="gradient-text">{t("about.title2")}</span>
           </h2>
         </motion.div>
-        <div className="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
-          {/* Left: text */}
+        <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}>
-
-
-
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               {t("about.p1")}
             </p>
@@ -66,38 +54,10 @@ const AboutSection = () => {
               </div>
             </div>
           </motion.div>
-
-          {/* Right: use cases */}
-          <motion.div
-            className="flex flex-col gap-4"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}>
-
-            
-            {useCases.map((item, i) => {}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            )}
-          </motion.div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default AboutSection;
