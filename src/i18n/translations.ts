@@ -42,7 +42,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.tekinfra.tek": "Tek",
     "about.tekinfra.tekDesc": "— fonetický přepis slova „tech\" (technology)",
     "about.tekinfra.infra": "Infra",
-    "about.tekinfra.infraDesc": "— zkrácenina slova infrastruktura",
+    "about.tekinfra.infraDesc": "— zkrácenina slova infrastructure",
     "about.deploy.title": "Typický průběh nasazení",
     "about.deploy.s1": "Discovery",
     "about.deploy.s1d": "(cíle, data, přístupy)",
