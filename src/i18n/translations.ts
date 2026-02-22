@@ -42,7 +42,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.p3suffix": " pro jednotný styl odpovědí a doménovou terminologii.",
     "about.tekinfra.title": "Proč TekInfra",
     "about.tekinfra.tek": "Tek",
-    "about.tekinfra.tekDesc": "- fonetický přepis slova „tech\" (technology)",
+    "about.tekinfra.tekDesc": "— fonetický přepis slova „tech\" (technology)",
     "about.tekinfra.infra": "Infra",
     "about.tekinfra.infraDesc": "— infrastructure (infrastruktura, aby běžela bezpečně a spolehlivě)",
     "about.deploy.title": "Typický průběh nasazení",
