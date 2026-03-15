@@ -103,19 +103,19 @@ const Landing = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
           >
-            <Button size="lg" className="text-base px-8 py-6 bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/20" asChild>
+            <Button size="lg" className="text-base px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20" asChild>
               <Link to="/site#contact">
                 <MessageCircle className="mr-2 w-5 h-5" />
                 {t("landing.ctaContact")}
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-base px-8 py-6 group" asChild>
+            <Button size="lg" className="text-base px-8 py-6 bg-info hover:bg-info/90 text-info-foreground shadow-lg shadow-info/20" asChild>
               <Link to="/demo">
                 <Monitor className="mr-2 w-5 h-5" />
                 {t("landing.ctaDemo")}
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-base px-8 py-6 group" asChild>
+            <Button size="lg" className="text-base px-8 py-6 bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/20" asChild>
               <Link to="/site">
                 {t("landing.ctaSite")}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
