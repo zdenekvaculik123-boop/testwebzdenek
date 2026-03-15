@@ -47,7 +47,7 @@ const slideTitles: Record<string, string[]> = {
 };
 
 const UseCasesSlideshow = () => {
-  const { language, t } = useLanguage();
+  const { lang, t } = useLanguage();
   const [current, setCurrent] = useState(0);
   const [fullscreen, setFullscreen] = useState(false);
 
