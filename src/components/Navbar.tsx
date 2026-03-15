@@ -41,9 +41,6 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <Button size="sm" className="bg-info hover:bg-info/90 text-info-foreground shadow-sm shadow-info/20" asChild>
-              <Link to="/demo">{t("nav.demo")}</Link>
-            </Button>
             <button
               onClick={toggleLang}
               className="px-3 py-1.5 rounded-md text-xs font-mono font-semibold border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors flex items-center gap-1.5"
@@ -51,6 +48,9 @@ const Navbar = () => {
               <img src={lang === "cs" ? flagGb : flagCz} alt="" className="w-5 h-5 rounded-full object-cover" />
               {lang === "cs" ? "EN" : "CZ"}
             </button>
+            <Button size="sm" className="bg-info hover:bg-info/90 text-info-foreground shadow-sm shadow-info/20" asChild>
+              <Link to="/demo">{t("nav.demo")}</Link>
+            </Button>
             <Button size="sm" className="glow-primary" asChild>
               <a href="#contact">{t("nav.cta")}</a>
             </Button>
