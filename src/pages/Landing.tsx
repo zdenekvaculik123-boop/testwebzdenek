@@ -104,7 +104,7 @@ const Landing = () => {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <Button size="lg" className="text-base px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20" asChild>
-              <Link to="/site#contact">
+              <Link to="/#contact">
                 <MessageCircle className="mr-2 w-5 h-5" />
                 {t("landing.ctaContact")}
               </Link>
