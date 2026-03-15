@@ -104,7 +104,7 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
@@ -117,6 +117,18 @@ const HeroSection = () => {
                 {t("hero.cta2")}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
+            </Button>
+            <Button size="lg" variant="outline" className="text-base px-8 py-6 group" asChild>
+              <Link to="/landing">
+                <Play className="mr-2 w-5 h-5" />
+                {t("hero.ctaVideo")}
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" className="text-base px-8 py-6 group" asChild>
+              <Link to="/demo">
+                <Monitor className="mr-2 w-5 h-5" />
+                {t("hero.ctaDemo")}
+              </Link>
             </Button>
           </motion.div>
         </motion.div>

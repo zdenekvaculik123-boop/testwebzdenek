@@ -254,6 +254,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.benefit2b": " over internal data",
     "hero.benefit3a": "From strategy",
     "hero.benefit3b": " to production",
+    "hero.ctaVideo": "Watch the video",
+    "hero.ctaDemo": "Try the demo",
 
     // About
     "about.tag": "// WHAT WE DO",
