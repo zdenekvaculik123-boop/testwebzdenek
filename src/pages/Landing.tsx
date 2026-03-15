@@ -46,7 +46,7 @@ const Landing = () => {
               {lang === "cs" ? "EN" : "CZ"}
             </button>
             <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
-              <Link to="/site#contact">
+              <Link to="/#contact">
                 <MessageCircle className="mr-1 w-4 h-4" />
                 {t("landing.ctaContact")}
               </Link>
