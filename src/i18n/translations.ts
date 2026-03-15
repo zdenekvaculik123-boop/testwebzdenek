@@ -218,9 +218,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "landing.title1": "AI nad firemními daty",
     "landing.title2": "v akci",
     "landing.desc": "Podívejte se, jak AI asistent pracuje s interní dokumentací — v reálném čase, bezpečně a přesně.",
-    "landing.goToSite": "O TEKINFRA",
+    "landing.goToSite": "Jak to funguje?",
     "landing.ctaDemo": "Vyzkoušet demo",
-    "landing.ctaSite": "Více o TEKINFRA",
+    "landing.ctaSite": "Jak to funguje?",
     "landing.ctaContact": "Konzultace zdarma",
     "landing.videoFallback": "Váš prohlížeč nepodporuje přehrávání videa.",
 
@@ -450,9 +450,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "landing.title1": "AI over company data",
     "landing.title2": "in action",
     "landing.desc": "See how an AI assistant works with internal documentation — in real time, securely and accurately.",
-    "landing.goToSite": "About TEKINFRA",
+    "landing.goToSite": "How it works?",
     "landing.ctaDemo": "Try the demo",
-    "landing.ctaSite": "More about TEKINFRA",
+    "landing.ctaSite": "How it works?",
     "landing.ctaContact": "Free consultation",
     "landing.videoFallback": "Your browser does not support video playback.",
 
