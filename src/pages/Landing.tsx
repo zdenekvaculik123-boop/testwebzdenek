@@ -95,6 +95,7 @@ const Landing = () => {
           >
             <div className="glass-card rounded-2xl overflow-hidden glow-primary relative group cursor-pointer" onClick={!isPlaying ? handlePlay : undefined}>
               <video
+                key={lang}
                 ref={videoRef}
                 className="w-full aspect-video"
                 controls={isPlaying}
