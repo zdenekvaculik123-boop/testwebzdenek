@@ -25,6 +25,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.benefit2b": " nad interními daty",
     "hero.benefit3a": "Od strategie",
     "hero.benefit3b": " po provoz",
+    "hero.ctaVideo": "Podívejte se na video",
+    "hero.ctaDemo": "Vyzkoušet demo",
 
     // About
     "about.tag": "// CO DĚLÁME",
