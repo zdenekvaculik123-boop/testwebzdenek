@@ -220,7 +220,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "landing.desc": "Podívejte se, jak AI asistent pracuje s interní dokumentací — v reálném čase, bezpečně a přesně.",
     "landing.goToSite": "Jak to funguje?",
     "landing.ctaDemo": "Vyzkoušet demo",
-    "landing.ctaSite": "Více o TEKINFRA",
+    "landing.ctaSite": "Jak to funguje?",
     "landing.ctaContact": "Konzultace zdarma",
     "landing.videoFallback": "Váš prohlížeč nepodporuje přehrávání videa.",
 
