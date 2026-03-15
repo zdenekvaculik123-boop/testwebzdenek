@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Monitor, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import tekinfraLogo from "@/assets/tekinfra-logo.png";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -26,6 +26,18 @@ const Landing = () => {
             <img src={tekinfraLogo} alt="TEKINFRA" className="h-[60px]" />
           </Link>
           <div className="flex items-center gap-4">
+            <Link
+              to="/site"
+              className="hidden sm:inline-flex text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t("landing.goToSite")}
+            </Link>
+            <Link
+              to="/demo"
+              className="hidden sm:inline-flex text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t("landing.ctaDemo")}
+            </Link>
             <button
               onClick={toggleLang}
               className="px-3 py-1.5 rounded-md text-xs font-mono font-semibold border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors flex items-center gap-1.5"
@@ -33,8 +45,11 @@ const Landing = () => {
               <img src={lang === "cs" ? flagGb : flagCz} alt="" className="w-5 h-5 rounded-full object-cover" />
               {lang === "cs" ? "EN" : "CZ"}
             </button>
-            <Button size="sm" className="glow-primary" asChild>
-              <Link to="/">{t("landing.goToSite")}</Link>
+            <Button size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+              <Link to="/site#contact">
+                <MessageCircle className="mr-1 w-4 h-4" />
+                {t("landing.ctaContact")}
+              </Link>
             </Button>
           </div>
         </div>
@@ -88,14 +103,20 @@ const Landing = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
           >
-            <Button size="lg" className="text-base px-8 py-6 glow-primary" asChild>
+            <Button size="lg" className="text-base px-8 py-6 bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/20" asChild>
+              <Link to="/site#contact">
+                <MessageCircle className="mr-2 w-5 h-5" />
+                {t("landing.ctaContact")}
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" className="text-base px-8 py-6 group" asChild>
               <Link to="/demo">
-                <Play className="mr-2 w-5 h-5" />
+                <Monitor className="mr-2 w-5 h-5" />
                 {t("landing.ctaDemo")}
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="text-base px-8 py-6 group" asChild>
-              <Link to="/">
+              <Link to="/site">
                 {t("landing.ctaSite")}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>

@@ -119,7 +119,7 @@ const HeroSection = () => {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="text-base px-8 py-6 group" asChild>
-              <Link to="/landing">
+              <Link to="/">
                 <Play className="mr-2 w-5 h-5" />
                 {t("hero.ctaVideo")}
               </Link>

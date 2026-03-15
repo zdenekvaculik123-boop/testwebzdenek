@@ -35,7 +35,7 @@ const Demo = () => {
               {lang === "cs" ? "EN" : "CZ"}
             </button>
             <Button size="sm" variant="outline" asChild>
-              <Link to="/landing">
+              <Link to="/">
                 <ArrowLeft className="mr-1 w-4 h-4" />
                 {t("demo.back")}
               </Link>
