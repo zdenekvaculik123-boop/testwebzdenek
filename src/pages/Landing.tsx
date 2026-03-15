@@ -11,6 +11,15 @@ import flagGb from "@/assets/flag-gb.png";
 const Landing = () => {
   const { lang, setLang, t } = useLanguage();
   const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background relative">
