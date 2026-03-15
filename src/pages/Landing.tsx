@@ -103,7 +103,7 @@ const Landing = () => {
                 onPause={() => setIsPlaying(false)}
                 onEnded={() => setIsPlaying(false)}
               >
-                <source src="/videos/tekinfra_landing_v1.mp4" type="video/mp4" />
+                <source src={lang === "cs" ? "/videos/tekinfra_landing_v1.mp4" : "/videos/tekinfra_landing_v1_EN.mp4"} type="video/mp4" />
                 {t("landing.videoFallback")}
               </video>
               {!isPlaying && (

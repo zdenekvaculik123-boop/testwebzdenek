@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const HeroSection = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -87,7 +87,7 @@ const HeroSection = () => {
               onPause={() => setIsPlaying(false)}
               onEnded={() => setIsPlaying(false)}
             >
-              <source src="/videos/tekinfra_landing_v1.mp4" type="video/mp4" />
+              <source src={lang === "cs" ? "/videos/tekinfra_landing_v1.mp4" : "/videos/tekinfra_landing_v1_EN.mp4"} type="video/mp4" />
               {t("landing.videoFallback")}
             </video>
             {!isPlaying && (
