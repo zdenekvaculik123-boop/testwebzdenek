@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Code2, Users, Package, Building } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import UseCasesSlideshow from "./UseCasesSlideshow";
 
 const ForWhomSection = () => {
   const { t } = useLanguage();
