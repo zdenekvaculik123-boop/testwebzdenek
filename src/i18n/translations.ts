@@ -235,7 +235,7 @@ export const translations: Record<Lang, Record<string, string>> = {
   },
   en: {
     // Navbar
-    "nav.about": "What we do",
+    "nav.about": "About us",
     "nav.howItWorks": "How it works",
     "nav.technology": "Technology",
     "nav.deployment": "Deployment",

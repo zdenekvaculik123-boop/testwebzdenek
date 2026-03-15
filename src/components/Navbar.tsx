@@ -85,13 +85,6 @@ const Navbar = () => {
                 </a>
               ))}
               <Link
-                to="/"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                {t("nav.video")}
-              </Link>
-              <Link
                 to="/demo"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
                 onClick={() => setIsOpen(false)}
