@@ -43,7 +43,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.p3mid": " a bezpečném napojení na vaše systémy. Volitelně doplníme ",
     "about.p3bold2": "QLoRA fine-tuning",
     "about.p3suffix": " pro jednotný styl odpovědí a doménovou terminologii.",
-    "about.p4": "TekInfra = Technology × Infrastructure. Stavíme AI tak, aby fungovala v produkci — bezpečně, spolehlivě a napojená na firemní data a procesy.",
+    "about.p4.suffix": ". Stavíme AI tak, aby fungovala v produkci — bezpečně, spolehlivě a napojená na firemní data a procesy.",
     "about.tekinfra.title": "Proč TekInfra",
     "about.tekinfra.tek": "Tek",
     "about.tekinfra.tekDesc": "— fonetický přepis slova „tech\" (technology)",
