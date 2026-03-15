@@ -118,18 +118,6 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="text-base px-8 py-6 group" asChild>
-              <Link to="/">
-                <Play className="mr-2 w-5 h-5" />
-                {t("hero.ctaVideo")}
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="text-base px-8 py-6 group" asChild>
-              <Link to="/demo">
-                <Monitor className="mr-2 w-5 h-5" />
-                {t("hero.ctaDemo")}
-              </Link>
-            </Button>
           </motion.div>
         </motion.div>
       </div>

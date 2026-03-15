@@ -87,6 +87,20 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
+              <Link
+                to="/"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                {t("nav.video")}
+              </Link>
+              <Link
+                to="/demo"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                {t("nav.demo")}
+              </Link>
               <button
                 onClick={toggleLang}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2 text-left font-mono flex items-center gap-2"
@@ -95,7 +109,7 @@ const Navbar = () => {
                 {lang === "cs" ? "English" : "Čeština"}
               </button>
               <Button size="sm" className="glow-primary w-full" asChild>
-                <a href="#contact">{t("nav.cta")}</a>
+                <a href="#contact">{t("nav.contact")}</a>
               </Button>
             </div>
           </motion.div>
