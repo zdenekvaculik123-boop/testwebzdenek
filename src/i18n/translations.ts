@@ -432,7 +432,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "ct.tag": "// CONTACT",
     "ct.title1": "Let's get",
     "ct.title2": "started",
-    "ct.desc": "Have a project in mind? Get in touch and we'll discuss how we can help.",
+    "ct.desc": "Get in touch and we'll discuss how we can help.",
     "ct.name": "Name",
     "ct.email": "Email",
     "ct.company": "Company",
