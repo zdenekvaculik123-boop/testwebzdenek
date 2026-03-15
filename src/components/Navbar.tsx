@@ -27,9 +27,9 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/30">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <img src={tekinfraLogo} alt="TEKINFRA" className="h-[60px]" />
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-6">
@@ -42,9 +42,6 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              {t("nav.video")}
-            </Link>
             <Link to="/demo" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               {t("nav.demo")}
             </Link>
@@ -87,13 +84,6 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Link
-                to="/"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                {t("nav.video")}
-              </Link>
               <Link
                 to="/demo"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"

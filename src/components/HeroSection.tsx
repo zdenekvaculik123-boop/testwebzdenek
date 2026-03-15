@@ -1,24 +1,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle, Monitor } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const HeroSection = () => {
   const { t } = useLanguage();
 
-  const benefits = [
-    { a: "hero.benefit1a", b: "hero.benefit1b" },
-    { a: "hero.benefit2a", b: "hero.benefit2b" },
-    { a: "hero.benefit3a", b: "hero.benefit3b" },
-  ];
-
-  const desc = t("hero.desc");
-  const boldPart = t("hero.descBold");
-  const descParts = desc.split(boldPart);
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Subtle dot pattern like other sections */}
+    <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Subtle dot pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px)`,
@@ -42,12 +33,12 @@ const HeroSection = () => {
 
       <div className="container mx-auto relative z-10 px-6 py-20">
         <motion.div
-          className="max-w-3xl mx-auto text-center"
+          className="max-w-4xl mx-auto text-center"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          {/* Tag – same style as other sections */}
+          {/* Tag */}
           <motion.span
             className="text-sm font-mono text-primary mb-6 block"
             initial={{ opacity: 0 }}
@@ -57,7 +48,7 @@ const HeroSection = () => {
             {t("hero.badge")}
           </motion.span>
 
-          {/* Title – consistent with other section headings */}
+          {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             {t("hero.title1")}{" "}
             <span className="gradient-text">{t("hero.title2")}</span>
@@ -65,59 +56,73 @@ const HeroSection = () => {
 
           {/* Description */}
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            {descParts[0]}
-            <span className="text-foreground font-semibold">{boldPart}</span>
-            {descParts[1]}
+            {t("landing.desc")}
           </p>
+        </motion.div>
 
-          {/* Benefits row */}
-          <motion.div
-            className="flex flex-wrap justify-center items-center gap-x-2 gap-y-3 mb-12"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-          >
-            {benefits.map((b, i) => (
-              <span key={i} className="flex items-center gap-1 text-sm md:text-base">
-                {i > 0 && <span className="text-muted-foreground mx-3">•</span>}
-                <span className="font-semibold text-foreground">{t(b.a)}</span>
-                <span className="text-muted-foreground">{t(b.b)}</span>
-              </span>
-            ))}
-          </motion.div>
+        {/* Video */}
+        <motion.div
+          className="max-w-4xl mx-auto mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
+          <div className="glass-card rounded-2xl overflow-hidden glow-primary">
+            <video
+              className="w-full aspect-video"
+              controls
+              poster=""
+              preload="metadata"
+            >
+              <source src="/videos/tekinfra_landing_v1.mp4" type="video/mp4" />
+              {t("landing.videoFallback")}
+            </video>
+          </div>
+        </motion.div>
 
-          {/* Glowing gradient line */}
-          <motion.div
-            className="relative w-full max-w-2xl mx-auto h-[2px] mb-12"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-          >
-            <div className="absolute inset-0 rounded-full" style={{
-              background: 'linear-gradient(90deg, transparent, hsl(165 82% 51%), hsl(270 60% 60%), transparent)'
-            }} />
-            <div className="absolute inset-0 rounded-full blur-md" style={{
-              background: 'linear-gradient(90deg, transparent, hsl(165 82% 51% / 0.6), hsl(270 60% 60% / 0.6), transparent)'
-            }} />
-          </motion.div>
+        {/* About text */}
+        <motion.div
+          className="max-w-3xl mx-auto mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+            {t("about.p1")}
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            {t("about.p2")}
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            {t("about.p4")}
+          </p>
+        </motion.div>
 
-          {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-          >
-            <Button size="lg" className="text-base px-8 py-6 glow-primary" asChild>
-              <a href="#contact">{t("hero.cta1")}</a>
-            </Button>
-            <Button size="lg" variant="outline" className="text-base px-8 py-6 group" asChild>
-              <a href="#how-it-works">
-                {t("hero.cta2")}
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-          </motion.div>
+        {/* CTA Buttons */}
+        <motion.div
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          <Button size="lg" className="text-base px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20" asChild>
+            <a href="#contact">
+              <MessageCircle className="mr-2 w-5 h-5" />
+              {t("hero.cta1")}
+            </a>
+          </Button>
+          <Button size="lg" className="text-base px-8 py-6 bg-info hover:bg-info/90 text-info-foreground shadow-lg shadow-info/20" asChild>
+            <Link to="/demo">
+              <Monitor className="mr-2 w-5 h-5" />
+              {t("nav.demo")}
+            </Link>
+          </Button>
+          <Button size="lg" variant="outline" className="text-base px-8 py-6 group" asChild>
+            <a href="#how-it-works">
+              {t("hero.cta2")}
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </Button>
         </motion.div>
       </div>
     </section>

@@ -3,7 +3,7 @@ export type Lang = "cs" | "en";
 export const translations: Record<Lang, Record<string, string>> = {
   cs: {
     // Navbar
-    "nav.about": "Co děláme",
+    "nav.about": "O nás",
     "nav.howItWorks": "Jak to funguje",
     "nav.technology": "Technologie",
     "nav.deployment": "Nasazení",
@@ -235,7 +235,7 @@ export const translations: Record<Lang, Record<string, string>> = {
   },
   en: {
     // Navbar
-    "nav.about": "What we do",
+    "nav.about": "About us",
     "nav.howItWorks": "How it works",
     "nav.technology": "Technology",
     "nav.deployment": "Deployment",
