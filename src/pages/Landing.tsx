@@ -27,7 +27,7 @@ const Landing = () => {
           </Link>
           <div className="flex items-center gap-4">
             <Link
-              to="/site"
+              to="/"
               className="hidden sm:inline-flex text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {t("landing.goToSite")}
@@ -46,7 +46,7 @@ const Landing = () => {
               {lang === "cs" ? "EN" : "CZ"}
             </button>
             <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
-              <Link to="/site#contact">
+              <Link to="/#contact">
                 <MessageCircle className="mr-1 w-4 h-4" />
                 {t("landing.ctaContact")}
               </Link>
@@ -104,7 +104,7 @@ const Landing = () => {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <Button size="lg" className="text-base px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20" asChild>
-              <Link to="/site#contact">
+              <Link to="/#contact">
                 <MessageCircle className="mr-2 w-5 h-5" />
                 {t("landing.ctaContact")}
               </Link>
@@ -116,7 +116,7 @@ const Landing = () => {
               </Link>
             </Button>
             <Button size="lg" className="text-base px-8 py-6 bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/20" asChild>
-              <Link to="/site">
+              <Link to="/">
                 {t("landing.ctaSite")}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
