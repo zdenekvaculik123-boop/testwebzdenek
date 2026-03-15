@@ -116,7 +116,7 @@ const Landing = () => {
               </Link>
             </Button>
             <Button size="lg" className="text-base px-8 py-6 bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/20" asChild>
-              <Link to="/site">
+              <Link to="/">
                 {t("landing.ctaSite")}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
