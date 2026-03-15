@@ -110,6 +110,9 @@ const HeroSection = () => {
           <p className="text-lg text-muted-foreground leading-relaxed mb-4">
             {t("about.p1")}
           </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            {t("about.p2")}
+          </p>
           <p className="text-muted-foreground leading-relaxed">
             {t("about.p4")}
           </p>
