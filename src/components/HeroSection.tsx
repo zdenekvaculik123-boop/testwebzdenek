@@ -7,6 +7,15 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 const HeroSection = () => {
   const { t } = useLanguage();
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
 
   return (
     <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden">
