@@ -27,7 +27,7 @@ const Landing = () => {
           </Link>
           <div className="flex items-center gap-4">
             <Link
-              to="/site"
+              to="/"
               className="hidden sm:inline-flex text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {t("landing.goToSite")}
