@@ -7,7 +7,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "nav.howItWorks": "Jak to funguje",
     "nav.technology": "Technologie",
     "nav.deployment": "Nasazení",
-    "nav.forWhom": "Pro koho",
+    "nav.forWhom": "Příklady",
     "nav.contact": "Kontakt",
     "nav.cta": "Kontakt",
     "nav.video": "Video",
