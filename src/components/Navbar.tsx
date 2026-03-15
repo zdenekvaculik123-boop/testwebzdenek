@@ -18,7 +18,6 @@ const Navbar = () => {
     { label: t("nav.technology"), href: "#technology" },
     { label: t("nav.deployment"), href: "#deployment" },
     { label: t("nav.forWhom"), href: "#for-whom" },
-    { label: t("nav.contact"), href: "#contact" },
   ];
 
   const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
@@ -42,9 +41,9 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <Link to="/demo" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              {t("nav.demo")}
-            </Link>
+            <Button size="sm" className="bg-info hover:bg-info/90 text-info-foreground shadow-sm shadow-info/20" asChild>
+              <Link to="/demo">{t("nav.demo")}</Link>
+            </Button>
             <button
               onClick={toggleLang}
               className="px-3 py-1.5 rounded-md text-xs font-mono font-semibold border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors flex items-center gap-1.5"
@@ -53,7 +52,7 @@ const Navbar = () => {
               {lang === "cs" ? "EN" : "CZ"}
             </button>
             <Button size="sm" className="glow-primary" asChild>
-              <a href="#contact">{t("nav.contact")}</a>
+              <a href="#contact">{t("nav.cta")}</a>
             </Button>
           </div>
 
@@ -84,13 +83,11 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Link
-                to="/demo"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                {t("nav.demo")}
-              </Link>
+              <Button size="sm" className="bg-info hover:bg-info/90 text-info-foreground shadow-sm shadow-info/20 w-full" asChild>
+                <Link to="/demo" onClick={() => setIsOpen(false)}>
+                  {t("nav.demo")}
+                </Link>
+              </Button>
               <button
                 onClick={toggleLang}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors py-2 text-left font-mono flex items-center gap-2"
@@ -99,7 +96,7 @@ const Navbar = () => {
                 {lang === "cs" ? "English" : "Čeština"}
               </button>
               <Button size="sm" className="glow-primary w-full" asChild>
-                <a href="#contact">{t("nav.contact")}</a>
+                <a href="#contact">{t("nav.cta")}</a>
               </Button>
             </div>
           </motion.div>
