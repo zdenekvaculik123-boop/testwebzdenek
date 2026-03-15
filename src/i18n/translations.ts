@@ -37,7 +37,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.badge1": "Pro technické i netechnické týmy",
     "about.badge2": "Nasazení v řádu týdnů",
     "about.p1": "Jsme poradenská firma, která pomáhá firmám zavádět AI pro práci s interními daty a procesy.",
-    "about.p2": "",
+    "about.p2": "\n",
     "about.p3prefix1": "Naše řešení stavíme na prověřené ",
     "about.p3bold1": "RAG architektuře",
     "about.p3mid": " a bezpečném napojení na vaše systémy. Volitelně doplníme ",
