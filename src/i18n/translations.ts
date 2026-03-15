@@ -130,11 +130,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "dep.cloud.p4": "Řízený přístup a auditovatelnost",
 
     // ForWhom
-    "fw.tag": "// PRO KOHO",
-    "fw.title1": "Pro",
-    "fw.title2": "technické i netechnické",
-    "fw.title3": "firmy",
-    "fw.desc": "Naše řešení je navrženo pro firmy, které chtějí využít AI nad svými interními daty — bez ohledu na velikost nebo technické zázemí.",
+    "fw.tag": "// PŘÍKLADY",
+    "fw.title": "Konkrétní příklady aplikace",
     "fw.s1.title": "CTO a IT manažeři",
     "fw.s1.desc": "Hledáte způsob, jak zpřístupnit technickou dokumentaci a specifikace celému týmu bez zahlcení podpory. Chcete řešení, které je bezpečné, auditovatelné a integrovatelné do stávající infrastruktury.",
     "fw.s1.t1": "On-premise", "fw.s1.t2": "API integrace", "fw.s1.t3": "Security compliance",
@@ -363,11 +360,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "dep.cloud.p4": "Managed access and auditability",
 
     // ForWhom
-    "fw.tag": "// FOR WHOM",
-    "fw.title1": "For",
-    "fw.title2": "technical and non-technical",
-    "fw.title3": "companies",
-    "fw.desc": "Our solution is designed for companies that want to leverage AI over their internal data — regardless of size or technical background.",
+    "fw.tag": "// EXAMPLES",
+    "fw.title": "Concrete application examples",
     "fw.s1.title": "CTOs & IT managers",
     "fw.s1.desc": "Looking for a way to make technical documentation and specifications accessible to the entire team without overwhelming support. You want a solution that's secure, auditable and integrable into existing infrastructure.",
     "fw.s1.t1": "On-premise", "fw.s1.t2": "API integration", "fw.s1.t3": "Security compliance",
