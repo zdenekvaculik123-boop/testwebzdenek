@@ -267,7 +267,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.badge1": "For technical & non-technical teams",
     "about.badge2": "Deployment in weeks",
     "about.p1": "We are a consulting firm that helps companies implement AI for working with internal data and processes.",
-    "about.p2": "",
+    "about.p2": "\n",
     "about.p3prefix1": "We build our solutions on proven ",
     "about.p3bold1": "RAG architecture",
     "about.p3mid": " and secure connection to your systems. Optionally we add ",
