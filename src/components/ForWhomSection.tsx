@@ -16,7 +16,7 @@ const ForWhomSection = () => {
         >
           <span className="text-sm font-mono text-primary mb-4 block">{t("fw.tag")}</span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {t("fw.title")}
+            {t("fw.title1")}<span className="gradient-text">{t("fw.title2")}</span>
           </h2>
         </motion.div>
 
