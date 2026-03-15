@@ -27,7 +27,7 @@ const Landing = () => {
           </Link>
           <div className="flex items-center gap-4">
             <Link
-              to="/"
+              to="/#how-it-works"
               className="hidden sm:inline-flex text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {t("landing.goToSite")}
@@ -116,7 +116,7 @@ const Landing = () => {
               </Link>
             </Button>
             <Button size="lg" className="text-base px-8 py-6 bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/20" asChild>
-              <Link to="/">
+              <Link to="/#how-it-works">
                 {t("landing.ctaSite")}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
