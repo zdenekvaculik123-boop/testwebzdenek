@@ -457,7 +457,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "landing.videoFallback": "Your browser does not support video playback.",
 
     // Demo
-    "demo.title": "Demo - Internal AI Working Over Internal Data",
+    "demo.title": "Demo - AI Working Over Internal Data",
     "demo.desc": "Interactive demonstration of an AI assistant working over corporate documentation.",
     "demo.back": "Back",
     "demo.cta": "Launch demo",
