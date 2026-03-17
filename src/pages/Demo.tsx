@@ -62,8 +62,8 @@ const Demo = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              {t("demo.title")}
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              {t("demo.title1")} <span className="gradient-text">{t("demo.title2")}</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               {t("demo.desc")}
