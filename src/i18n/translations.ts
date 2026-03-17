@@ -224,7 +224,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "landing.videoFallback": "Váš prohlížeč nepodporuje přehrávání videa.",
 
     // Demo
-    "demo.title": "Demo AI asistenta",
+    "demo.title": "Demo - interní AI pracující nad interními daty",
     "demo.desc": "Ukázka interní AI pracující nad vlastními daty.",
     "demo.back": "Zpět",
     "demo.cta": "Spustit demo",
@@ -457,7 +457,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "landing.videoFallback": "Your browser does not support video playback.",
 
     // Demo
-    "demo.title": "AI Assistant Demo",
+    "demo.title": "Demo - Internal AI Working Over Internal Data",
     "demo.desc": "Interactive demonstration of an AI assistant working over corporate documentation.",
     "demo.back": "Back",
     "demo.cta": "Launch demo",
