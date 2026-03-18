@@ -104,8 +104,8 @@ const ContactSection = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 required
               />
-              <Button size="lg" className="w-full py-6 glow-primary" type="submit">
-                {t("ct.submit")}
+              <Button size="lg" className="w-full py-6 glow-primary" type="submit" disabled={isLoading}>
+                {isLoading ? (t("ct.sending") || "Odesílání...") : t("ct.submit")}
               </Button>
             </form>
           </motion.div>
