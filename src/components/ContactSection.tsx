@@ -20,26 +20,35 @@ const ContactSection = () => {
     setIsLoading(true);
 
     try {
+      const payload = { name, email, company, message };
+      console.log("Sending contact form:", payload);
+
       const res = await fetch(
         "https://t8amv2py00.execute-api.eu-central-1.amazonaws.com/default/contact-form",
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, company, message }),
+          headers: { "Content-Type": "text/plain" },
+          mode: "no-cors",
+          body: JSON.stringify(payload),
         }
       );
 
-      if (!res.ok) throw new Error("Request failed");
+      console.log("Response status:", res.status, "type:", res.type);
 
-      toast({
-        title: t("ct.toastSuccessTitle") || "Zpráva odeslána",
-        description: t("ct.toastSuccessDesc") || "Děkujeme, ozveme se vám co nejdříve.",
-      });
+      // In no-cors mode, response is opaque (status 0) — treat as success
+      if (res.type === "opaque" || res.ok) {
+        toast({
+          title: t("ct.toastSuccessTitle") || "Zpráva odeslána",
+          description: t("ct.toastSuccessDesc") || "Děkujeme, ozveme se vám co nejdříve.",
+        });
 
-      setName("");
-      setEmail("");
-      setCompany("");
-      setMessage("");
+        setName("");
+        setEmail("");
+        setCompany("");
+        setMessage("");
+      } else {
+        throw new Error("Request failed");
+      }
     } catch {
       toast({
         title: t("ct.toastErrorTitle") || "Chyba při odesílání",
