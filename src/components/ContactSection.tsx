@@ -13,21 +13,42 @@ const ContactSection = () => {
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const subject = company
-      ? `Kontakt od ${name} (${company})`
-      : `Kontakt od ${name}`;
-    const body = `Jméno: ${name}\nE-mail: ${email}\nFirma: ${company}\n\nZpráva:\n${message}`;
-    
-    window.location.href = `mailto:info@tekinfra.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    toast({
-      title: t("ct.toastTitle") || "Otevírám e-mailového klienta",
-      description: t("ct.toastDesc") || "Zpráva bude odeslána přes váš e-mailový program.",
-    });
+    setIsLoading(true);
+
+    try {
+      const res = await fetch(
+        "https://t8amv2py00.execute-api.eu-central-1.amazonaws.com/default/contact-form",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, company, message }),
+        }
+      );
+
+      if (!res.ok) throw new Error("Request failed");
+
+      toast({
+        title: t("ct.toastSuccessTitle") || "Zpráva odeslána",
+        description: t("ct.toastSuccessDesc") || "Děkujeme, ozveme se vám co nejdříve.",
+      });
+
+      setName("");
+      setEmail("");
+      setCompany("");
+      setMessage("");
+    } catch {
+      toast({
+        title: t("ct.toastErrorTitle") || "Chyba při odesílání",
+        description: t("ct.toastErrorDesc") || "Zkuste to prosím znovu později.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -83,8 +104,8 @@ const ContactSection = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 required
               />
-              <Button size="lg" className="w-full py-6 glow-primary" type="submit">
-                {t("ct.submit")}
+              <Button size="lg" className="w-full py-6 glow-primary" type="submit" disabled={isLoading}>
+                {isLoading ? (t("ct.sending") || "Odesílání...") : t("ct.submit")}
               </Button>
             </form>
           </motion.div>
