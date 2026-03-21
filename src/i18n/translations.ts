@@ -469,6 +469,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "demo.cta": "Launch demo",
     "demo.access": "To obtain login credentials, please contact us.",
     "demo.contact": "Contact us",
+    "demo.unavailable.title": "Demo unavailable",
+    "demo.unavailable.desc": "The demo server is currently offline. Please try again later or contact us.",
+    "demo.unavailable.ok": "OK",
+    "demo.checking": "Checking availability…",
 
     // Footer
     "footer.rights": "All rights reserved.",
