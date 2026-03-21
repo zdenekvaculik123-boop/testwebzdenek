@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Lock, MessageCircle, Play, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -19,11 +20,17 @@ const DEMO_URL = "http://52.28.230.0/";
 
 const Demo = () => {
   const { lang, setLang, t } = useLanguage();
+  const navigate = useNavigate();
   const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [checking, setChecking] = useState(false);
   const [showUnavailable, setShowUnavailable] = useState(false);
+
+  const goToContact = useCallback(() => {
+    setShowUnavailable(false);
+    navigate("/?scrollTo=contact");
+  }, [navigate]);
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -162,11 +169,9 @@ const Demo = () => {
               <p className="text-muted-foreground mb-6">
                 {t("demo.access")}
               </p>
-              <Button size="sm" className="glow-primary" asChild>
-                <a href="/#contact">
+              <Button size="sm" className="glow-primary" onClick={goToContact}>
                   <MessageCircle className="mr-2 w-4 h-4" />
                   {t("demo.contact")}
-                </a>
               </Button>
             </div>
           </motion.div>
@@ -181,11 +186,9 @@ const Demo = () => {
             <DialogDescription>{t("demo.unavailable.desc")}</DialogDescription>
           </DialogHeader>
           <div className="flex justify-end gap-3 pt-2">
-            <Button size="sm" className="glow-primary" asChild>
-              <a href="/#contact">
+            <Button size="sm" className="glow-primary" onClick={goToContact}>
                 <MessageCircle className="mr-2 w-4 h-4" />
                 {t("demo.contact")}
-              </a>
             </Button>
             <Button size="sm" variant="outline" onClick={() => setShowUnavailable(false)}>
               {t("demo.unavailable.ok")}
