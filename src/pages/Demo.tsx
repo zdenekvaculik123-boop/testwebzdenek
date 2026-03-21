@@ -169,11 +169,9 @@ const Demo = () => {
               <p className="text-muted-foreground mb-6">
                 {t("demo.access")}
               </p>
-              <Button size="sm" className="glow-primary" asChild>
-                <a href="/#contact">
+              <Button size="sm" className="glow-primary" onClick={goToContact}>
                   <MessageCircle className="mr-2 w-4 h-4" />
                   {t("demo.contact")}
-                </a>
               </Button>
             </div>
           </motion.div>
