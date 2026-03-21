@@ -231,6 +231,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "demo.cta": "Spustit demo",
     "demo.access": "Pro získání přístupových údajů (login/heslo) nás prosím kontaktujte.",
     "demo.contact": "Kontaktujte nás",
+    "demo.unavailable.title": "Demo není dostupné",
+    "demo.unavailable.desc": "Demo server momentálně neběží. Zkuste to prosím později, nebo nás kontaktujte.",
+    "demo.unavailable.ok": "Rozumím",
+    "demo.checking": "Ověřuji dostupnost…",
 
     // Footer
     "footer.rights": "Všechna práva vyhrazena.",
@@ -465,6 +469,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "demo.cta": "Launch demo",
     "demo.access": "To obtain login credentials, please contact us.",
     "demo.contact": "Contact us",
+    "demo.unavailable.title": "Demo unavailable",
+    "demo.unavailable.desc": "The demo server is currently offline. Please try again later or contact us.",
+    "demo.unavailable.ok": "OK",
+    "demo.checking": "Checking availability…",
 
     // Footer
     "footer.rights": "All rights reserved.",

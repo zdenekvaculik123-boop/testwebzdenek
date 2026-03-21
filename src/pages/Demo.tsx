@@ -1,23 +1,51 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ExternalLink, Lock, MessageCircle, Play } from "lucide-react";
+import { ArrowLeft, ExternalLink, Lock, MessageCircle, Play, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import tekinfraLogo from "@/assets/tekinfra-logo.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import flagCz from "@/assets/flag-cz.png";
 import flagGb from "@/assets/flag-gb.png";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+
+const DEMO_URL = "http://52.28.230.0/";
 
 const Demo = () => {
   const { lang, setLang, t } = useLanguage();
   const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [checking, setChecking] = useState(false);
+  const [showUnavailable, setShowUnavailable] = useState(false);
 
   const handlePlay = () => {
     if (videoRef.current) {
       videoRef.current.play();
       setIsPlaying(true);
+    }
+  };
+
+  const handleLaunchDemo = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    setChecking(true);
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 5000);
+      await fetch(DEMO_URL, { mode: "no-cors", signal: controller.signal });
+      clearTimeout(timeout);
+      // If fetch didn't throw, the server is reachable
+      window.open(DEMO_URL, "_blank", "noopener,noreferrer");
+    } catch {
+      setShowUnavailable(true);
+    } finally {
+      setChecking(false);
     }
   };
 
@@ -110,11 +138,23 @@ const Demo = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <Button size="lg" className="text-base px-8 py-6 bg-info hover:bg-info/90 text-info-foreground shadow-lg shadow-info/20 mb-8" asChild>
-              <a href="http://52.28.230.0/" target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 w-5 h-5" />
-                {t("demo.cta")}
-              </a>
+            <Button
+              size="lg"
+              className="text-base px-8 py-6 bg-info hover:bg-info/90 text-info-foreground shadow-lg shadow-info/20 mb-8"
+              onClick={handleLaunchDemo}
+              disabled={checking}
+            >
+              {checking ? (
+                <>
+                  <Loader2 className="mr-2 w-5 h-5 animate-spin" />
+                  {t("demo.checking")}
+                </>
+              ) : (
+                <>
+                  <ExternalLink className="mr-2 w-5 h-5" />
+                  {t("demo.cta")}
+                </>
+              )}
             </Button>
 
             <div className="glass-card rounded-2xl p-8 text-center">
@@ -132,6 +172,27 @@ const Demo = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Unavailable dialog */}
+      <Dialog open={showUnavailable} onOpenChange={setShowUnavailable}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>{t("demo.unavailable.title")}</DialogTitle>
+            <DialogDescription>{t("demo.unavailable.desc")}</DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-end gap-3 pt-2">
+            <Button size="sm" className="glow-primary" asChild>
+              <a href="/#contact">
+                <MessageCircle className="mr-2 w-4 h-4" />
+                {t("demo.contact")}
+              </a>
+            </Button>
+            <Button size="sm" variant="outline" onClick={() => setShowUnavailable(false)}>
+              {t("demo.unavailable.ok")}
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
