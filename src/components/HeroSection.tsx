@@ -108,6 +108,12 @@ const HeroSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
+          <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+            {t("about.p1")}
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            {t("about.p2")}
+          </p>
           <p className="text-muted-foreground leading-relaxed">
             TekInfra = <span className="text-primary font-semibold">Technology</span> × <span className="text-accent font-semibold">Infrastructure</span>{t("about.p4.suffix")}
           </p>
