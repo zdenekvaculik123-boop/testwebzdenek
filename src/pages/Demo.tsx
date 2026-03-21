@@ -20,11 +20,17 @@ const DEMO_URL = "http://52.28.230.0/";
 
 const Demo = () => {
   const { lang, setLang, t } = useLanguage();
+  const navigate = useNavigate();
   const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [checking, setChecking] = useState(false);
   const [showUnavailable, setShowUnavailable] = useState(false);
+
+  const goToContact = useCallback(() => {
+    setShowUnavailable(false);
+    navigate("/?scrollTo=contact");
+  }, [navigate]);
 
   const handlePlay = () => {
     if (videoRef.current) {
