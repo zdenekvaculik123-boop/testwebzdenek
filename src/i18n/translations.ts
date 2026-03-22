@@ -231,7 +231,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "demo.cta": "Spustit demo",
     "demo.access": "Pro získání přístupových údajů (login/heslo) nás prosím kontaktujte.",
     "demo.contact": "Kontaktujte nás",
-     "demo.unavailable.title": "Demo spustíme pro vás na vyžádání",
+     "demo.unavailable.title": "Demo pro vás spustíme na vyžádání",
      "demo.unavailable.desc": "Hardware, na kterém demo běží, nenecháváme zapnutý trvale. Pokud máte zájem o ukázku, kontaktujte nás a demo pro vás rádi spustíme.",
      "demo.unavailable.ok": "Rozumím",
     "demo.checking": "Ověřuji dostupnost…",
