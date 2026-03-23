@@ -25,6 +25,15 @@ const Index = () => {
       }, 100);
     }
   }, [searchParams, setSearchParams]);
+
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      setTimeout(() => {
+        document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    }
+  }, []);
   return (
     <div className="min-h-screen bg-background relative">
       <div className="starfield">
