@@ -29,9 +29,17 @@ const Index = () => {
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
     if (hash) {
-      setTimeout(() => {
-        document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
-      }, 300);
+      const scrollToHash = () => {
+        const el = document.getElementById(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+      // Try multiple times to ensure DOM is ready
+      const t1 = setTimeout(scrollToHash, 100);
+      const t2 = setTimeout(scrollToHash, 500);
+      const t3 = setTimeout(scrollToHash, 1000);
+      return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
     }
   }, []);
   return (
