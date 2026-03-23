@@ -6,7 +6,7 @@ const ForWhomSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="for-whom" className="py-24 relative">
+    <section id="use-cases" className="py-24 relative">
       <div className="container mx-auto px-6">
         <motion.div
           className="max-w-3xl mx-auto text-center mb-12"

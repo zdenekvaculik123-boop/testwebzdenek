@@ -17,7 +17,7 @@ const Navbar = () => {
     { label: t("nav.howItWorks"), href: "#how-it-works" },
     { label: t("nav.technology"), href: "#technology" },
     { label: t("nav.deployment"), href: "#deployment" },
-    { label: t("nav.forWhom"), href: "#for-whom" },
+    { label: t("nav.forWhom"), href: "#use-cases" },
   ];
 
   const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
