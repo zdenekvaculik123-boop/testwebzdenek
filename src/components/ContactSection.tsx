@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { toast } from "@/hooks/use-toast";
+import { fireSeznamConversion } from "@/hooks/useCookieConsent";
 
 const ContactSection = () => {
   const { t } = useLanguage();
