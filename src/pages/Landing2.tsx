@@ -5,10 +5,16 @@ import { ArrowRight, Play, Monitor, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import tekinfraLogo from "@/assets/tekinfra-logo.png";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import flagCz from "@/assets/flag-cz.png";
 import flagGb from "@/assets/flag-gb.png";
 
 const Landing2 = () => {
+  usePageMeta({
+    title: "TekInfra — AI pro firemní data | Zábavná ukázka",
+    description: "Zábavná video ukázka interní AI od TEKINFRA. Zjistěte, jak AI chrání a zpracovává vaše firemní data.",
+    canonical: "https://testwebzdenek.lovable.app/landing2",
+  });
   const { lang, setLang, t } = useLanguage();
   const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
   const videoRef = useRef<HTMLVideoElement>(null);

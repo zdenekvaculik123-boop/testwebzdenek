@@ -5,10 +5,16 @@ import { ArrowRight, Play, Monitor, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import tekinfraLogo from "@/assets/tekinfra-logo.png";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import flagCz from "@/assets/flag-cz.png";
 import flagGb from "@/assets/flag-gb.png";
 
 const Landing = () => {
+  usePageMeta({
+    title: "TekInfra — AI řešení pro firmy | Video prezentace",
+    description: "Podívejte se, jak interní AI od TEKINFRA pomáhá firmám efektivněji pracovat s daty. Video prezentace a kontakt.",
+    canonical: "https://testwebzdenek.lovable.app/landing1",
+  });
   const { lang, setLang, t } = useLanguage();
   const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
   const videoRef = useRef<HTMLVideoElement>(null);

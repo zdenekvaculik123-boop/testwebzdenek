@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 
@@ -15,6 +16,12 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+
+  usePageMeta({
+    title: "TekInfra — interní AI pro vaše data",
+    description: "Interní AI jako konkurenční výhoda. Bezpečnost a ochrana vašich dat. AI infrastruktura a poradenství od TEKINFRA.",
+    canonical: "https://testwebzdenek.lovable.app/",
+  });
 
   useEffect(() => {
     const scrollTo = searchParams.get("scrollTo");

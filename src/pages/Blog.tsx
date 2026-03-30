@@ -5,10 +5,16 @@ import { Link } from "react-router-dom";
 import tekinfraLogo from "@/assets/tekinfra-logo.png";
 import blogImage from "@/assets/blog-copilot-screenshot.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import flagCz from "@/assets/flag-cz.png";
 import flagGb from "@/assets/flag-gb.png";
 
 const Blog = () => {
+  usePageMeta({
+    title: "Jak jsme s interní AI ušetřili čas při správě dat | TekInfra Blog",
+    description: "Případová studie: Jak interní AI Copilot od TEKINFRA pomohl firmě efektivněji spravovat firemní data a ušetřit čas zaměstnanců.",
+    canonical: "https://testwebzdenek.lovable.app/blog",
+  });
   const { lang, setLang, t } = useLanguage();
   const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
 
