@@ -10,6 +10,7 @@ import Landing2 from "./pages/Landing2";
 import Demo from "./pages/Demo";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
+import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
 
