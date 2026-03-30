@@ -10,8 +10,8 @@ const CookieBanner = () => {
 
   const text =
     lang === "cs"
-      ? "Tento web používá cookies pro analýzu a retargeting. Souhlasíte s jejich použitím?"
-      : "This website uses cookies for analytics and retargeting. Do you agree to their use?";
+      ? "Používáme cookies ke zlepšení vašeho zážitku z prohlížení a k analýze návštěvnosti."
+      : "We use cookies to improve your browsing experience and analyse site traffic.";
 
   const acceptLabel = lang === "cs" ? "Souhlasím" : "Accept";
   const denyLabel = lang === "cs" ? "Odmítnout" : "Deny";
