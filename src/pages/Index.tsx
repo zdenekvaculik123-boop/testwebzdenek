@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 
