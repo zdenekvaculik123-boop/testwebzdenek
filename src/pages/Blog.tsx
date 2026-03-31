@@ -18,6 +18,7 @@ const Blog = () => {
   });
   const { lang, setLang, t } = useLanguage();
   const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="min-h-screen bg-background relative">
