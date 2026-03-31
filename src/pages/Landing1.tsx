@@ -17,6 +17,7 @@ const Landing = () => {
     canonical: "https://testwebzdenek.lovable.app/landing1",
   });
   const { lang, setLang, t } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
