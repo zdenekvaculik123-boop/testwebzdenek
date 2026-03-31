@@ -29,6 +29,7 @@ const Demo = () => {
   const { lang, setLang, t } = useLanguage();
   const navigate = useNavigate();
   const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
+  const { theme, toggleTheme } = useTheme();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [checking, setChecking] = useState(false);
