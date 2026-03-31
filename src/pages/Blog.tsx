@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import tekinfraLogo from "@/assets/tekinfra-logo.png";
 import tekinfraLogoLight from "@/assets/tekinfra-logo-light.png";
 import blogImage from "@/assets/blog-copilot-screenshot.jpg";
+import blogImage2 from "@/assets/blog-dokument-sprava.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import flagCz from "@/assets/flag-cz.png";
