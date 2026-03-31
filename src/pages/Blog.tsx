@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import tekinfraLogo from "@/assets/tekinfra-logo.png";
 import tekinfraLogoLight from "@/assets/tekinfra-logo-light.png";
 import blogImage from "@/assets/blog-copilot-screenshot.jpg";
+import blogImage2 from "@/assets/blog-dokument-sprava.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import flagCz from "@/assets/flag-cz.png";
@@ -136,6 +137,19 @@ const Blog = () => {
                 a vrátí konkrétní výstup. Důležité je, že nejde jen o „chat" odpověď — systém zároveň ukáže,
                 z jakých souborů vycházel. Firma tak získává nejen rychlost, ale i ověřitelnost.
               </p>
+
+              {/* Screenshot 2 – správa dokumentů */}
+              <div className="glass-card rounded-2xl overflow-hidden my-10">
+                <img
+                  src={blogImage2}
+                  alt="Správa firemních dokumentů v interním AI systému"
+                  className="w-full"
+                  loading="lazy"
+                />
+                <p className="text-sm text-muted-foreground/70 px-6 py-4 italic">
+                  Přehled firemních dokumentů s organizací do kolekcí a možností okamžitého dotazování nad jejich obsahem.
+                </p>
+              </div>
 
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">
                 Proč je bezpečnost klíčová
