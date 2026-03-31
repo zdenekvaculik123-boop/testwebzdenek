@@ -5,6 +5,7 @@ import { useTheme } from "@/hooks/useTheme";
 
 const Footer = () => {
   const { t } = useLanguage();
+  const { theme } = useTheme();
 
   return (
     <footer className="border-t border-border/30 py-10">
