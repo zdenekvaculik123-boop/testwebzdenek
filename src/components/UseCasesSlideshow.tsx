@@ -103,7 +103,7 @@ const UseCasesSlideshow = () => {
       </div>
 
       {/* Slide */}
-      <div className={`relative overflow-hidden rounded-xl bg-black/20 ${isFullscreen ? "flex-1" : "aspect-[16/9]"}`}>
+      <div className={`relative overflow-hidden rounded-xl bg-muted ${isFullscreen ? "flex-1" : "aspect-[16/9]"}`}>
         <AnimatePresence mode="wait">
           <motion.img
             key={`${lang}-${current}`}

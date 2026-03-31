@@ -76,7 +76,7 @@ const Blog = () => {
               Jak jsme s interní AI ušetřili čas při správě firemních dat?
             </h1>
 
-            <div className="prose prose-invert prose-lg max-w-none space-y-6 text-muted-foreground">
+            <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground dark:prose-invert">
               <p>
                 Firmy dnes často neztrácí čas na složitých úkolech, ale na opakovaném dohledávání informací,
                 přepisování podkladů a odpovídání na stále stejné interní dotazy. Právě tady dnes dává smysl
