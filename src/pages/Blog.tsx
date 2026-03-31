@@ -151,6 +151,7 @@ const Blog = () => {
                 </p>
               </div>
 
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">
                 Proč je bezpečnost klíčová
               </h2>
               <p>
