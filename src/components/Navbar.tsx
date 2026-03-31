@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <img src={theme === "light" ? tekinfraLogoLight : tekinfraLogo} alt="TEKINFRA" className="h-[60px]" />
+            <img src={theme === "light" ? tekinfraLogoLight : tekinfraLogo} alt="TEKINFRA" className="h-[60px] shrink-0" />
           </Link>
 
           {/* Desktop nav */}
