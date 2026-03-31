@@ -42,7 +42,7 @@ const Landing = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/30">
         <div className="container mx-auto px-6 flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <img src={tekinfraLogo} alt="TEKINFRA" className="h-[60px]" />
+            <img src={theme === "light" ? tekinfraLogoLight : tekinfraLogo} alt="TEKINFRA" className="h-[60px]" />
           </Link>
           <div className="flex items-center gap-4">
             <Link
