@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Monitor, MessageCircle } from "lucide-react";
+import { ArrowRight, Monitor, MessageCircle, Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
 import tekinfraLogo from "@/assets/tekinfra-logo.png";
 import blogImage from "@/assets/blog-copilot-screenshot.jpg";
