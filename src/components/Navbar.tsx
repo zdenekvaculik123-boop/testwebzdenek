@@ -12,6 +12,7 @@ import { useTheme } from "@/hooks/useTheme";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { lang, setLang, t } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
     { label: t("nav.about"), href: "#about" },
