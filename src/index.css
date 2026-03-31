@@ -123,6 +123,11 @@
     @apply bg-card/60 backdrop-blur-xl border border-border/50;
   }
 
+  .light .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/60;
+    box-shadow: 0 1px 3px hsl(220 13% 70% / 0.15);
+  }
+
   .glow-primary {
     box-shadow: 0 0 40px -10px hsl(165 82% 51% / 0.3);
   }
@@ -130,6 +135,11 @@
   .glow-accent {
     box-shadow: 0 0 40px -10px hsl(270 60% 60% / 0.3);
   }
+}
+
+/* Hide starfield in light mode */
+.light .starfield {
+  display: none;
 }
 
 /* Starfield background */
