@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Monitor, MessageCircle, Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
 import tekinfraLogo from "@/assets/tekinfra-logo.png";
+import tekinfraLogoLight from "@/assets/tekinfra-logo-light.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { useTheme } from "@/hooks/useTheme";
