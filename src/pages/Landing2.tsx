@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import LightModeParticles from "@/components/LightModeParticles";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Monitor, MessageCircle, Sun, Moon } from "lucide-react";
