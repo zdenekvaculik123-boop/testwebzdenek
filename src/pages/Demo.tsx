@@ -75,29 +75,29 @@ const Demo = () => {
 
       {/* Top bar */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/30">
-        <div className="container mx-auto px-6 flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2">
-            <img src={theme === "light" ? tekinfraLogoLight : tekinfraLogo} alt="TEKINFRA" className="h-[60px]" />
+        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+          <Link to="/" className="flex items-center gap-2 shrink-0">
+            <img src={theme === "light" ? tekinfraLogoLight : tekinfraLogo} alt="TEKINFRA" className="h-[60px] shrink-0" />
           </Link>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-md border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors"
+              className="p-1.5 sm:p-2 rounded-md border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors"
               aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
             >
               {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
             <button
               onClick={toggleLang}
-              className="px-3 py-1.5 rounded-md text-xs font-mono font-semibold border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors flex items-center gap-1.5"
+              className="px-2 py-1 sm:px-3 sm:py-1.5 rounded-md text-xs font-mono font-semibold border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors flex items-center gap-1"
             >
-              <img src={lang === "cs" ? flagGb : flagCz} alt="" className="w-5 h-5 rounded-full object-cover" />
-              {lang === "cs" ? "EN" : "CZ"}
+              <img src={lang === "cs" ? flagGb : flagCz} alt="" className="w-4 h-4 sm:w-5 sm:h-5 rounded-full object-cover" />
+              <span className="hidden sm:inline">{lang === "cs" ? "EN" : "CZ"}</span>
             </button>
             <Button size="sm" variant="outline" asChild>
               <Link to="/">
                 <ArrowLeft className="mr-1 w-4 h-4" />
-                {t("demo.back")}
+                <span className="hidden sm:inline">{t("demo.back")}</span>
               </Link>
             </Button>
           </div>
