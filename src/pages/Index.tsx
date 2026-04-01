@@ -17,6 +17,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const { theme } = useTheme();
   const [searchParams, setSearchParams] = useSearchParams();
 
   usePageMeta({
