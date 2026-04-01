@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useTheme } from "@/hooks/useTheme";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import LightModeParticles from "@/components/LightModeParticles";
 
 import HowItWorksSection from "@/components/HowItWorksSection";
 import RagVsQloraSection from "@/components/RagVsQloraSection";
@@ -15,6 +17,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const { theme } = useTheme();
   const [searchParams, setSearchParams] = useSearchParams();
 
   usePageMeta({
@@ -55,6 +58,7 @@ const Index = () => {
         <div className="stars-sm" />
         <div className="stars-md" />
         <div className="stars-lg" />
+        {theme === "light" && <LightModeParticles />}
       </div>
       <Navbar />
       <HeroSection />
