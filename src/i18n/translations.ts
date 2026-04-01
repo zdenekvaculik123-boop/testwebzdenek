@@ -239,7 +239,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     // Blog
     "blog.tag": "// BLOG",
     "blog.title": "Jak jsme s interní AI ušetřili čas při správě firemních dat?",
-    "blog.p1": "Firmy dnes často neztrácí čas na složitých úkolech, ale na opakovaném dohledávání informací, přepisování podkladů a odpovídání na stále stejné interní dotazy. Právě tady dnes dává smysl interní AI — ne jako módní doplněk, ale jako praktický nástroj pro vyšší efektivitu a bezpečnost firemních dat.",
+    "blog.p1": "Firmy dnes často neztrácejí čas složitými úkoly, ale opakovaným dohledáváním informací, přepisováním podkladů a odpovídáním na stále stejné interní dotazy. Právě tady dnes dává smysl interní AI — ne jako módní doplněk, ale jako praktický nástroj pro vyšší efektivitu a bezpečnost firemních dat.",
     "blog.img1.alt": "Ukázka interního Copilotu nad firemními dokumenty",
     "blog.img1.caption": "Ukázka interního Copilotu nad firemními dokumenty: odpověď s dohledatelnými zdroji a konkrétními podklady.",
     "blog.quote": "\u201EDneska už dokážeme firmám až 1/3 času ušetřit a mohou tak výrazně snížit své náklady. Největší přínos ale není jen v rychlosti \u2014 zásadní je i to, že data zůstávají bezpečně pod kontrolou.\u201C",
