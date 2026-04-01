@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { useTheme } from "@/hooks/useTheme";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import LightModeParticles from "@/components/LightModeParticles";
 
 import HowItWorksSection from "@/components/HowItWorksSection";
 import RagVsQloraSection from "@/components/RagVsQloraSection";
