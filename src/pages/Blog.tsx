@@ -13,6 +13,9 @@ import flagGb from "@/assets/flag-gb.png";
 import { useTheme } from "@/hooks/useTheme";
 
 const Blog = () => {
+  const { lang, setLang, t } = useLanguage();
+  const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
+  const { theme, toggleTheme } = useTheme();
   usePageMeta({
     title: lang === "cs" 
       ? "Jak jsme s interní AI ušetřili čas při správě dat | TekInfra Blog"
@@ -22,9 +25,6 @@ const Blog = () => {
       : "Case study: How TEKINFRA's internal AI Copilot helped a company manage corporate data more efficiently and save employee time.",
     canonical: "https://testwebzdenek.lovable.app/blog",
   });
-  const { lang, setLang, t } = useLanguage();
-  const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
-  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="min-h-screen bg-background relative">
