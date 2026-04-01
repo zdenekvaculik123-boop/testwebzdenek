@@ -34,7 +34,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden xl:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -69,7 +69,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile toggle */}
-          <button className="lg:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
+          <button className="xl:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -79,7 +79,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="lg:hidden glass-card border-t border-border/30"
+            className="xl:hidden glass-card border-t border-border/30"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
