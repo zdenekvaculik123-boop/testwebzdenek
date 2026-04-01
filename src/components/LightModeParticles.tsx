@@ -15,24 +15,48 @@ interface Particle {
 
 const LightModeParticles = () => {
   const particles = useMemo<Particle[]>(() => {
-    const colors = [
+    // Larger animated particles
+    const mainColors = [
       "hsl(165 82% 51% / 0.25)",
       "hsl(270 60% 60% / 0.2)",
       "hsl(210 100% 55% / 0.2)",
       "hsl(165 82% 45% / 0.15)",
       "hsl(270 60% 55% / 0.15)",
     ];
-    return Array.from({ length: 30 }, (_, i) => ({
+    const main = Array.from({ length: 30 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
       size: 2 + Math.random() * 4,
-      color: colors[i % colors.length],
+      color: mainColors[i % mainColors.length],
       duration: 12 + Math.random() * 20,
       delay: Math.random() * -20,
       dx: (Math.random() - 0.5) * 30,
       dy: (Math.random() - 0.5) * 30,
     }));
+
+    // Cosmic dust – many tiny teal & purple specks
+    const dustColors = [
+      "hsl(165 82% 51% / 0.35)",
+      "hsl(165 82% 45% / 0.3)",
+      "hsl(270 60% 60% / 0.3)",
+      "hsl(270 60% 55% / 0.25)",
+      "hsl(165 82% 51% / 0.2)",
+      "hsl(270 60% 60% / 0.2)",
+    ];
+    const dust = Array.from({ length: 60 }, (_, i) => ({
+      id: 30 + i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: 1 + Math.random() * 2,
+      color: dustColors[i % dustColors.length],
+      duration: 18 + Math.random() * 25,
+      delay: Math.random() * -25,
+      dx: (Math.random() - 0.5) * 15,
+      dy: (Math.random() - 0.5) * 15,
+    }));
+
+    return [...main, ...dust];
   }, []);
 
   return (
