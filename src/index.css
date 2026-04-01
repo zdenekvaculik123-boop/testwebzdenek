@@ -144,60 +144,64 @@
 /* Light mode: futuristic tech grid */
 .light .starfield {
   background: 
-    radial-gradient(ellipse 900px 700px at 25% 15%, hsl(165 82% 51% / 0.07), transparent),
-    radial-gradient(ellipse 700px 600px at 80% 75%, hsl(270 60% 60% / 0.06), transparent),
-    radial-gradient(ellipse 800px 500px at 50% 50%, hsl(210 100% 55% / 0.04), transparent);
+    radial-gradient(ellipse 1000px 800px at 20% 10%, hsl(165 82% 51% / 0.12), transparent),
+    radial-gradient(ellipse 800px 700px at 85% 80%, hsl(270 60% 60% / 0.10), transparent),
+    radial-gradient(ellipse 900px 600px at 50% 50%, hsl(210 100% 55% / 0.08), transparent);
 }
 
-/* Tech grid lines + node dots */
+/* Bold tech grid lines + bright node dots */
 .light .starfield .stars-sm {
   background-image:
-    linear-gradient(90deg, hsl(165 82% 51% / 0.045) 1px, transparent 1px),
-    linear-gradient(0deg, hsl(165 82% 51% / 0.045) 1px, transparent 1px),
-    radial-gradient(2px 2px at 80px 120px, hsl(165 82% 45% / 0.28), transparent),
-    radial-gradient(1.5px 1.5px at 240px 60px, hsl(270 60% 55% / 0.22), transparent),
-    radial-gradient(2px 2px at 400px 200px, hsl(210 100% 55% / 0.24), transparent),
-    radial-gradient(1.5px 1.5px at 560px 140px, hsl(165 82% 45% / 0.2), transparent),
-    radial-gradient(2px 2px at 160px 320px, hsl(270 60% 55% / 0.28), transparent),
-    radial-gradient(1.5px 1.5px at 480px 360px, hsl(210 100% 55% / 0.22), transparent),
-    radial-gradient(2px 2px at 640px 80px, hsl(165 82% 45% / 0.24), transparent),
-    radial-gradient(1.5px 1.5px at 320px 420px, hsl(270 60% 55% / 0.2), transparent);
-  background-size: 120px 120px, 120px 120px, 700px 500px, 700px 500px, 700px 500px, 700px 500px, 700px 500px, 700px 500px, 700px 500px, 700px 500px;
+    linear-gradient(90deg, hsl(165 82% 45% / 0.12) 1px, transparent 1px),
+    linear-gradient(0deg, hsl(165 82% 45% / 0.12) 1px, transparent 1px),
+    radial-gradient(3.5px 3.5px at 60px 60px, hsl(165 82% 40% / 0.55), transparent),
+    radial-gradient(3px 3px at 180px 180px, hsl(270 60% 50% / 0.45), transparent),
+    radial-gradient(3.5px 3.5px at 300px 60px, hsl(210 100% 50% / 0.5), transparent),
+    radial-gradient(3px 3px at 420px 180px, hsl(165 82% 40% / 0.45), transparent),
+    radial-gradient(3.5px 3.5px at 540px 60px, hsl(270 60% 50% / 0.55), transparent),
+    radial-gradient(3px 3px at 60px 300px, hsl(210 100% 50% / 0.45), transparent),
+    radial-gradient(3.5px 3.5px at 180px 420px, hsl(165 82% 40% / 0.5), transparent),
+    radial-gradient(3px 3px at 300px 300px, hsl(270 60% 50% / 0.45), transparent),
+    radial-gradient(3.5px 3.5px at 420px 420px, hsl(210 100% 50% / 0.55), transparent),
+    radial-gradient(3px 3px at 540px 300px, hsl(165 82% 40% / 0.45), transparent);
+  background-size: 80px 80px, 80px 80px, 600px 480px, 600px 480px, 600px 480px, 600px 480px, 600px 480px, 600px 480px, 600px 480px, 600px 480px, 600px 480px, 600px 480px;
 }
 
-/* Glowing circuit nodes with pulse */
+/* Bright glowing circuit nodes with pulse */
 .light .starfield .stars-md {
   background-image:
-    radial-gradient(60px 60px at 10% 20%, hsl(165 82% 51% / 0.08), transparent),
-    radial-gradient(40px 40px at 30% 60%, hsl(270 60% 60% / 0.06), transparent),
-    radial-gradient(50px 50px at 55% 15%, hsl(210 100% 55% / 0.07), transparent),
-    radial-gradient(45px 45px at 75% 45%, hsl(165 82% 51% / 0.06), transparent),
-    radial-gradient(55px 55px at 90% 80%, hsl(270 60% 60% / 0.07), transparent),
-    radial-gradient(3px 3px at 10% 20%, hsl(165 82% 45% / 0.35), transparent),
-    radial-gradient(2.5px 2.5px at 30% 60%, hsl(270 60% 55% / 0.3), transparent),
-    radial-gradient(3px 3px at 55% 15%, hsl(210 100% 50% / 0.32), transparent),
-    radial-gradient(2.5px 2.5px at 75% 45%, hsl(165 82% 45% / 0.3), transparent),
-    radial-gradient(3px 3px at 90% 80%, hsl(270 60% 55% / 0.35), transparent);
+    radial-gradient(80px 80px at 10% 20%, hsl(165 82% 51% / 0.15), transparent),
+    radial-gradient(60px 60px at 30% 60%, hsl(270 60% 60% / 0.12), transparent),
+    radial-gradient(70px 70px at 55% 15%, hsl(210 100% 55% / 0.14), transparent),
+    radial-gradient(65px 65px at 75% 45%, hsl(165 82% 51% / 0.12), transparent),
+    radial-gradient(75px 75px at 90% 80%, hsl(270 60% 60% / 0.14), transparent),
+    radial-gradient(50px 50px at 45% 85%, hsl(210 100% 55% / 0.10), transparent),
+    radial-gradient(5px 5px at 10% 20%, hsl(165 82% 40% / 0.6), transparent),
+    radial-gradient(4px 4px at 30% 60%, hsl(270 60% 50% / 0.5), transparent),
+    radial-gradient(5px 5px at 55% 15%, hsl(210 100% 45% / 0.55), transparent),
+    radial-gradient(4px 4px at 75% 45%, hsl(165 82% 40% / 0.5), transparent),
+    radial-gradient(5px 5px at 90% 80%, hsl(270 60% 50% / 0.6), transparent),
+    radial-gradient(4px 4px at 45% 85%, hsl(210 100% 45% / 0.5), transparent);
   background-size: 100% 100%;
-  animation: light-pulse 12s ease-in-out infinite alternate;
+  animation: light-pulse 8s ease-in-out infinite alternate;
 }
 
-/* Horizontal scan line sweep */
+/* Visible scan line sweep */
 .light .starfield .stars-lg {
   background: linear-gradient(
     180deg,
     transparent 0%,
-    hsl(165 82% 51% / 0.025) 48%,
-    hsl(165 82% 51% / 0.06) 50%,
-    hsl(165 82% 51% / 0.025) 52%,
+    hsl(165 82% 51% / 0.04) 45%,
+    hsl(165 82% 51% / 0.14) 50%,
+    hsl(165 82% 51% / 0.04) 55%,
     transparent 100%
   );
   background-size: 100% 300%;
-  animation: light-scan 10s ease-in-out infinite;
+  animation: light-scan 8s ease-in-out infinite;
 }
 
 @keyframes light-pulse {
-  0% { opacity: 0.5; }
+  0% { opacity: 0.4; }
   100% { opacity: 1; }
 }
 
