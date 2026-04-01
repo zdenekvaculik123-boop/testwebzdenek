@@ -1,4 +1,5 @@
 import { useRef, useState, useCallback } from "react";
+import LightModeParticles from "@/components/LightModeParticles";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -71,6 +72,7 @@ const Demo = () => {
         <div className="stars-sm" />
         <div className="stars-md" />
         <div className="stars-lg" />
+        {theme === "light" && <LightModeParticles />}
       </div>
 
       {/* Top bar */}

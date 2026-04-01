@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import LightModeParticles from "@/components/LightModeParticles";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Monitor, MessageCircle, Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -32,6 +33,7 @@ const Blog = () => {
         <div className="stars-sm" />
         <div className="stars-md" />
         <div className="stars-lg" />
+        {theme === "light" && <LightModeParticles />}
       </div>
 
       {/* Navbar */}
