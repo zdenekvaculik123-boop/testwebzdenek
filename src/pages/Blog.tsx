@@ -81,99 +81,75 @@ const Blog = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-sm font-mono text-primary mb-6 block">// BLOG</span>
+            <span className="text-sm font-mono text-primary mb-6 block">{t("blog.tag")}</span>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
-              Jak jsme s interní AI ušetřili čas při správě firemních dat?
+              {t("blog.title")}
             </h1>
 
             <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground dark:prose-invert">
-              <p>
-                Firmy dnes často neztrácí čas na složitých úkolech, ale na opakovaném dohledávání informací,
-                přepisování podkladů a odpovídání na stále stejné interní dotazy. Právě tady dnes dává smysl
-                interní AI — ne jako módní doplněk, ale jako praktický nástroj pro vyšší efektivitu a bezpečnost
-                firemních dat.
-              </p>
+              <p>{t("blog.p1")}</p>
 
               {/* Screenshot */}
               <div className="glass-card rounded-2xl overflow-hidden my-10">
                 <img
                   src={blogImage}
-                  alt="Ukázka interního Copilotu nad firemními dokumenty"
+                  alt={t("blog.img1.alt")}
                   className="w-full"
                   loading="lazy"
                 />
                 <p className="text-sm text-muted-foreground/70 px-6 py-4 italic">
-                  Ukázka interního Copilotu nad firemními dokumenty: odpověď s dohledatelnými zdroji a konkrétními podklady.
+                  {t("blog.img1.caption")}
                 </p>
               </div>
 
               {/* Quote */}
               <blockquote className="border-l-4 border-primary pl-6 py-4 my-10 glass-card rounded-r-xl">
                 <p className="text-foreground font-medium italic text-lg">
-                  „Dneska už dokážeme firmám až 1/3 času ušetřit a mohou tak výrazně snížit své náklady.
-                  Největší přínos ale není jen v rychlosti — zásadní je i to, že data zůstávají bezpečně pod kontrolou."
+                  {t("blog.quote")}
                 </p>
                 <footer className="mt-3 text-sm text-primary font-semibold">
-                  — Zdeněk Vaculík, majitel firmy
+                  {t("blog.quoteAuthor")}
                 </footer>
               </blockquote>
 
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">
-                Kde dnes firmy nejčastěji ztrácí čas
+                {t("blog.h2.1")}
               </h2>
-              <p>
-                Největší prodlevy vznikají tam, kde lidé musí ručně hledat v e-mailech, dokumentech, směrnicích
-                a přílohách. Místo aby řešili odbornou práci, tráví minuty až hodiny hledáním správné odpovědi,
-                ověřováním verzí a přípravou podkladů. Interní AI dokáže tento proces zkrátit tím, že pracuje
-                nad firemními daty a vrací relevantní odpověď se zdroji.
-              </p>
+              <p>{t("blog.p2")}</p>
 
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">
-                Jak to funguje v praxi
+                {t("blog.h2.2")}
               </h2>
-              <p>
-                Uživatel položí přirozený dotaz a interní Copilot projde dostupné dokumenty, vyhodnotí souvislosti
-                a vrátí konkrétní výstup. Důležité je, že nejde jen o „chat" odpověď — systém zároveň ukáže,
-                z jakých souborů vycházel. Firma tak získává nejen rychlost, ale i ověřitelnost.
-              </p>
+              <p>{t("blog.p3")}</p>
 
-              {/* Screenshot 2 – správa dokumentů */}
+              {/* Screenshot 2 */}
               <div className="glass-card rounded-2xl overflow-hidden my-10">
                 <img
                   src={blogImage2}
-                  alt="Správa firemních dokumentů v interním AI systému"
+                  alt={t("blog.img2.alt")}
                   className="w-full"
                   loading="lazy"
                 />
                 <p className="text-sm text-muted-foreground/70 px-6 py-4 italic">
-                  Přehled firemních dokumentů s organizací do kolekcí a možností okamžitého dotazování nad jejich obsahem.
+                  {t("blog.img2.caption")}
                 </p>
               </div>
 
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">
-                Proč je bezpečnost klíčová
+                {t("blog.h2.3")}
               </h2>
-              <p>
-                U práce s firemními daty nestačí jen ušetřit čas. Stejně důležité je, aby byly informace chráněné,
-                interní a pod správou firmy. Právě proto je interní AI zajímavá: firmy nemusí posílat citlivé podklady
-                mimo své prostředí a mohou přesně řídit, kdo k čemu přistupuje. To je zásadní rozdíl oproti
-                neřízenému používání veřejných nástrojů.
-              </p>
+              <p>{t("blog.p4")}</p>
 
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">
-                Co si z toho odnést
+                {t("blog.h2.4")}
               </h2>
-              <p>
-                Správně nasazená interní AI dnes firmám nepřináší jen technologickou novinku. Přináší úsporu času,
-                vyšší efektivitu a bezpečnější práci s interními znalostmi. A právě to je kombinace, která z ní
-                dělá reálný byznysový přínos, ne jen módní trend.
-              </p>
+              <p>{t("blog.p5")}</p>
 
               {/* Tagline */}
               <div className="text-center my-12 py-6 glass-card rounded-2xl">
                 <p className="text-lg font-bold text-foreground">
-                  Interní AI jako konkurenční výhoda • Bezpečnost a ochrana vašich dat
+                  {t("blog.tagline")}
                 </p>
               </div>
             </div>
