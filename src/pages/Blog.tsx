@@ -11,8 +11,7 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import { useTheme } from "@/hooks/useTheme";
 
 const Blog = () => {
-  const { lang, setLang, t } = useLanguage();
-  const toggleLang = () => setLang(lang === "cs" ? "en" : "cs");
+  const { lang, t } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   usePageMeta({
     title: lang === "cs" 
