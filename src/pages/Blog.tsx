@@ -14,8 +14,12 @@ import { useTheme } from "@/hooks/useTheme";
 
 const Blog = () => {
   usePageMeta({
-    title: "Jak jsme s interní AI ušetřili čas při správě dat | TekInfra Blog",
-    description: "Případová studie: Jak interní AI Copilot od TEKINFRA pomohl firmě efektivněji spravovat firemní data a ušetřit čas zaměstnanců.",
+    title: lang === "cs" 
+      ? "Jak jsme s interní AI ušetřili čas při správě dat | TekInfra Blog"
+      : "How We Saved Time Managing Data with Internal AI | TekInfra Blog",
+    description: lang === "cs"
+      ? "Případová studie: Jak interní AI Copilot od TEKINFRA pomohl firmě efektivněji spravovat firemní data a ušetřit čas zaměstnanců."
+      : "Case study: How TEKINFRA's internal AI Copilot helped a company manage corporate data more efficiently and save employee time.",
     canonical: "https://testwebzdenek.lovable.app/blog",
   });
   const { lang, setLang, t } = useLanguage();
