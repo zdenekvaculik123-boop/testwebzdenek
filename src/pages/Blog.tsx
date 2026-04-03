@@ -74,10 +74,6 @@ const Blog = () => {
                 </footer>
               </blockquote>
 
-              <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">
-                {t("blog.h2.1")}
-              </h2>
-              <p>{t("blog.p2")}</p>
 
               <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">
                 {t("blog.h2.2")}
