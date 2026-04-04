@@ -20,6 +20,8 @@ export function useTheme() {
       root.classList.remove("light");
     }
     localStorage.setItem("theme", theme);
+    const meta = document.querySelector('meta[name="color-scheme"]');
+    if (meta) meta.setAttribute("content", theme);
   }, [theme]);
 
   const toggleTheme = () => setThemeState((t) => (t === "dark" ? "light" : "dark"));
