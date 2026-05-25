@@ -20,7 +20,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 
-const DEMO_URL = "http://52.28.230.0/";
+const DEMO_URL = "http://78.80.87.122/";
 
 const Demo = () => {
   usePageMeta({
