@@ -3,7 +3,7 @@ import LightModeParticles from "@/components/LightModeParticles";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ExternalLink, Lock, MessageCircle, Play, Loader2, Sun, Moon } from "lucide-react";
+import { ArrowLeft, ExternalLink, Lock, MessageCircle, Play, Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
 import tekinfraLogo from "@/assets/tekinfra-logo.png";
 import tekinfraLogoLight from "@/assets/tekinfra-logo-light.png";
