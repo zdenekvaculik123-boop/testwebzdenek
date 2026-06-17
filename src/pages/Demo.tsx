@@ -13,7 +13,7 @@ import flagCz from "@/assets/flag-cz.png";
 import flagGb from "@/assets/flag-gb.png";
 import { useTheme } from "@/hooks/useTheme";
 
-const DEMO_URL = "http://78.80.87.122/";
+const DEMO_URL = "https://demo.tekinfra.eu/";
 
 const Demo = () => {
   usePageMeta({
