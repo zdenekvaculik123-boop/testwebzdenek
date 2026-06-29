@@ -67,7 +67,7 @@ const Navbar = () => {
               <Link to="/demo">{t("nav.demo")}</Link>
             </Button>
             <Button size="sm" className="glow-primary" asChild>
-              <a href="#contact">{t("nav.cta")}</a>
+              <a href={sectionHref("contact")}>{t("nav.cta")}</a>
             </Button>
           </div>
 
@@ -118,7 +118,7 @@ const Navbar = () => {
                 {lang === "cs" ? "English" : "Čeština"}
               </button>
               <Button size="sm" className="glow-primary w-full" asChild>
-                <a href="#contact">{t("nav.cta")}</a>
+                <a href={sectionHref("contact")}>{t("nav.cta")}</a>
               </Button>
             </div>
           </motion.div>
